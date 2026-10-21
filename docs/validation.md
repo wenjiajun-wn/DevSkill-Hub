@@ -15,8 +15,10 @@ Follow-up validation performed on 2026-10-21 for DevSkill Hub v0.1.0. The initia
 | Installation execution | All 10 entries passed installed-file identity and supporting-resource checks in isolated Windows projects |
 | Functional tools | UI retrieval, API linting/breaking-change detection, JSON schema analysis, and Impeccable detection executed |
 | Known upstream defect | SQL schema analyzer missed a foreign key confirmed by SQLite; the equivalent JSON input passed |
-| Hosted validation | Initial [GitHub validation run](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39554960708) succeeded; follow-up CI is checked before completion |
-| Star-update automation | [Actual update run](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39556064054) succeeded and created [PR #1](https://github.com/wenjiajun-wn/DevSkill-Hub/pull/1) |
+| Hosted validation | [Follow-up validation run](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39561788481) passed on the repair commit with Python 3.11 and 3.13 |
+| Star-update automation | [Initial run](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39556064054) created [PR #1](https://github.com/wenjiajun-wn/DevSkill-Hub/pull/1); [follow-up run](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39561874058) passed and updated that same PR |
+| Upstream-monitor automation | [Hosted upstream-check run](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39561879272) passed; unchanged content produced no extra review PR |
+| Bot update branch | [Manual validation of the bot branch](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39562277004) passed on the exact PR head |
 
 Read the [installation evidence](evaluations/installation-smoke.md), [functional scope and limitations](evaluations/functional-smoke.md), [upstream report](upstream-status.md), and [verification records](verification.md). Star timestamps and values are maintained in [catalog/skills.yaml](../catalog/skills.yaml), independently of content reviews.
 
@@ -32,4 +34,5 @@ The maintenance tools take one writer lock, stage the entire batch, and journal 
 - Installation smoke checks do not prove automatic model activation or comparative usefulness. Four entries have executable helper-tool observations; six have labeled manual walkthroughs. No comparative effectiveness flag has been set true.
 - No paid model sessions or cloud resources were provisioned. Cloud SQL was installed and reviewed offline; live cloud connectivity, backups, and recovery remain outside the recorded test scope.
 - Upstream drift detection proposes review findings. It does not silently reset hashes, renew review claims, approve PRs, or merge changes.
+- GitHub placed the bot-created `pull_request` validation event in an approval-required state. The maintenance job had already run checks before creating/updating its PR, and a separate manual validation on the same PR head passed. PR review and merge remain manual.
 - Temporary upstream source files and installer caches are ignored by Git and excluded from publication. The repository contains original fixtures, summaries, and sanitized observations.

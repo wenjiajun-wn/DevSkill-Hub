@@ -1,0 +1,524 @@
+schema_version: 1
+version: 0.1.0
+categories:
+  frontend:
+    name: Frontend Development
+    name_zh: 前端开发
+  backend:
+    name: Backend Development
+    name_zh: 后端开发
+  database:
+    name: Database Development
+    name_zh: 数据库开发
+  engineering:
+    name: Engineering Practices
+    name_zh: 工程实践
+repositories:
+  anthropics/skills:
+    url: https://github.com/anthropics/skills
+    default_branch: main
+    stars: 182547
+    stars_updated_at: '2026-10-21T05:55:49Z'
+    updated_at: '2026-10-21T05:36:21Z'
+    pushed_at: '2026-10-09T18:45:52Z'
+    license:
+      spdx: Apache-2.0
+      scope: indexed skill only
+      url: https://github.com/anthropics/skills/blob/main/skills/frontend-design/LICENSE.txt
+      note: Frontend Design has a file-level Apache-2.0 license. The repository includes other skills
+        with different terms; its API license field is null.
+  nextlevelbuilder/ui-ux-pro-max-skill:
+    url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+    default_branch: main
+    stars: 138104
+    stars_updated_at: '2026-10-21T05:55:49Z'
+    updated_at: '2026-10-21T05:36:03Z'
+    pushed_at: '2026-10-15T02:04:34Z'
+    license:
+      spdx: MIT
+      scope: repository default
+      url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/LICENSE
+      note: Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
+  addyosmani/agent-skills:
+    url: https://github.com/addyosmani/agent-skills
+    default_branch: main
+    stars: 109059
+    stars_updated_at: '2026-10-21T05:55:49Z'
+    updated_at: '2026-10-21T05:38:33Z'
+    pushed_at: '2026-10-13T20:24:07Z'
+    license:
+      spdx: MIT
+      scope: repository default
+      url: https://github.com/addyosmani/agent-skills/blob/main/LICENSE
+      note: Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
+  pbakaus/impeccable:
+    url: https://github.com/pbakaus/impeccable
+    default_branch: main
+    stars: 83987
+    stars_updated_at: '2026-10-21T05:55:49Z'
+    updated_at: '2026-10-21T05:37:19Z'
+    pushed_at: '2026-10-21T03:11:42Z'
+    license:
+      spdx: Apache-2.0
+      scope: repository default
+      url: https://github.com/pbakaus/impeccable/blob/main/LICENSE
+      note: Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
+  mattpocock/skills:
+    url: https://github.com/mattpocock/skills
+    default_branch: main
+    stars: 298921
+    stars_updated_at: '2026-10-21T05:55:49Z'
+    updated_at: '2026-10-21T05:37:29Z'
+    pushed_at: '2026-10-19T15:52:15Z'
+    license:
+      spdx: MIT
+      scope: repository default
+      url: https://github.com/mattpocock/skills/blob/main/LICENSE
+      note: Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
+  alirezarezvani/claude-skills:
+    url: https://github.com/alirezarezvani/claude-skills
+    default_branch: main
+    stars: 28459
+    stars_updated_at: '2026-10-21T05:55:49Z'
+    updated_at: '2026-10-21T05:10:56Z'
+    pushed_at: '2026-08-30T09:46:16Z'
+    license:
+      spdx: MIT
+      scope: repository default
+      url: https://github.com/alirezarezvani/claude-skills/blob/main/LICENSE
+      note: Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
+  google/skills:
+    url: https://github.com/google/skills
+    default_branch: main
+    stars: 21453
+    stars_updated_at: '2026-10-21T05:55:49Z'
+    updated_at: '2026-10-21T04:35:44Z'
+    pushed_at: '2026-10-20T21:04:39Z'
+    license:
+      spdx: Apache-2.0
+      scope: repository default
+      url: https://github.com/google/skills/blob/main/LICENSE
+      note: Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
+  multica-ai/andrej-karpathy-skills:
+    url: https://github.com/multica-ai/andrej-karpathy-skills
+    default_branch: main
+    stars: 221594
+    stars_updated_at: '2026-10-21T05:55:49Z'
+    updated_at: '2026-10-21T05:38:31Z'
+    pushed_at: '2026-04-20T10:05:04Z'
+    license:
+      spdx: MIT
+      scope: upstream declaration; incomplete license evidence
+      url: https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md
+      note: SKILL.md frontmatter and the README declare MIT. No root LICENSE file was found and the API
+        license field is null. Confirm complete terms with upstream before redistribution.
+skills:
+- id: frontend-design
+  name: Frontend Design
+  category: frontend
+  description: Distinctive visual direction, typography, and intentional interface design.
+  description_zh: 指导有辨识度的视觉风格、字体排版与界面设计。
+  repository: anthropics/skills
+  skill_path: skills/frontend-design/SKILL.md
+  skill_url: https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md
+  upstream_name: frontend-design
+  source_commit: 41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f
+  skill_updated_at: '2026-09-03T16:37:13Z'
+  tags:
+  - frontend
+  - ui
+  - design
+  use_cases:
+  - Shape a new product page with a clear visual identity.
+  - Refine typography, color, and layout in an existing interface.
+  use_cases_zh:
+  - 为新产品页面建立清晰的视觉方向。
+  - 优化现有界面的字体、颜色与布局。
+  install:
+    command: '/plugin marketplace add anthropics/skills
+
+      /plugin install example-skills@anthropic-agent-skills'
+    documentation_url: https://github.com/anthropics/skills#claude-code
+    notes: Enter both commands inside Claude Code. This installs the example-skills bundle, including
+      Frontend Design, rather than only this skill.
+    notes_zh: 在 Claude Code 内输入两条命令；安装的是包含 Frontend Design 的 example-skills 插件包，并非仅此一个 Skill。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Confirmed skills/frontend-design/SKILL.md. Used the upstream Claude Code marketplace workflow
+    instead of assuming an undocumented npx command. License is verified at skill level.
+  review_notes_zh: 实际路径为 skills/frontend-design/SKILL.md。采用上游明确记录的 Claude Code 插件安装方式，未推断未记录的 npx 命令；许可证按此
+    Skill 单独核查。
+- id: ui-ux-pro-max
+  name: UI/UX Pro Max
+  category: frontend
+  description: Searchable design guidance for palettes, typography, accessibility, and frontend stacks.
+  description_zh: 提供可检索的配色、字体、无障碍与多技术栈界面设计指导。
+  repository: nextlevelbuilder/ui-ux-pro-max-skill
+  skill_path: .claude/skills/ui-ux-pro-max/SKILL.md
+  skill_url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md
+  upstream_name: ui-ux-pro-max
+  source_commit: a38d04c3d5c298c851dbe5e6ee1965ee3de42cb5
+  skill_updated_at: '2026-08-13T17:08:23Z'
+  tags:
+  - frontend
+  - ui
+  - ux
+  - design-system
+  use_cases:
+  - Choose a coherent palette and type system.
+  - Review responsive interactions and accessibility for a frontend stack.
+  use_cases_zh:
+  - 选择一致的配色与字体系统。
+  - 审查特定前端技术栈的响应式交互和无障碍体验。
+  install:
+    command: 'npm install -g ui-ux-pro-max-cli
+
+      uipro init --ai codex'
+    documentation_url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill#installation
+    notes: Run from your project root. The example targets Codex; upstream also documents --ai claude
+      and --ai cursor. Node.js/npm and Python 3 are prerequisites. The CLI supplies platform-specific
+      files and supporting data.
+    notes_zh: 在项目根目录运行，示例面向 Codex；上游另有 --ai claude 和 --ai cursor。需要 Node.js/npm 与 Python 3。CLI 会生成对应平台文件并包含配套数据。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Verified .claude/skills/ui-ux-pro-max/SKILL.md as the committed development copy. Upstream
+    identifies src/ui-ux-pro-max as source data/templates and recommends its CLI for installation. Current
+    npm package is ui-ux-pro-max-cli; older uipro-cli releases are described as stale.
+  review_notes_zh: 核实 .claude/skills/ui-ux-pro-max/SKILL.md 为仓库内开发版本；src/ui-ux-pro-max 保存源数据和模板，上游推荐 CLI
+    安装。当前包名为 ui-ux-pro-max-cli，上游已说明旧 uipro-cli 版本过时。
+- id: frontend-ui-engineering
+  name: Frontend UI Engineering
+  category: frontend
+  description: Component architecture, responsive layouts, state management, and accessible UI.
+  description_zh: 涵盖组件架构、响应式布局、状态管理与无障碍界面。
+  repository: addyosmani/agent-skills
+  skill_path: skills/frontend-ui-engineering/SKILL.md
+  skill_url: https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md
+  upstream_name: frontend-ui-engineering
+  source_commit: 3e1e0a2db595ab2abe89b1204f7eabb67a24eb90
+  skill_updated_at: '2026-10-03T15:35:42Z'
+  tags:
+  - frontend
+  - components
+  - accessibility
+  use_cases:
+  - Build composable UI components.
+  - Review state boundaries, responsive behavior, and accessibility.
+  use_cases_zh:
+  - 构建可组合的界面组件。
+  - 检查状态边界、响应式行为与无障碍要求。
+  install:
+    command: npx skills add addyosmani/agent-skills
+    documentation_url: https://github.com/addyosmani/agent-skills#quick-start
+    notes: Upstream repository-level installation includes the collection. Individual --skill installs
+      may omit the repository-level shared references directory; prefer the documented full-repository/native
+      plugin integration when those checklists matter.
+    notes_zh: 上游仓库级安装会包含整个集合。单独使用 --skill 安装可能缺少仓库级共享 references 目录，需要完整检查清单时请采用上游仓库或原生插件整合方式。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Confirmed skills/frontend-ui-engineering/SKILL.md. Upstream documents repository-level
+    npx installation and warns that individual-skill installs omit shared repository references. No installation
+    or effectiveness test was performed.
+  review_notes_zh: 核实路径 skills/frontend-ui-engineering/SKILL.md。上游明确记录仓库级 npx 安装，同时提醒单 Skill 安装可能缺少共享参考资料。未执行安装或效果测试。
+- id: impeccable
+  name: Impeccable
+  category: frontend
+  description: Audit, critique, polish, and animate interfaces with a focused design workflow.
+  description_zh: 通过设计工作流审查、评议、打磨界面并完善动效。
+  repository: pbakaus/impeccable
+  skill_path: .agents/skills/impeccable/SKILL.md
+  skill_url: https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md
+  upstream_name: impeccable
+  source_commit: aeeb3d8c30b5f95aeeb3e893b0f1a308af8fdb8f
+  skill_updated_at: '2026-10-19T17:51:07Z'
+  tags:
+  - frontend
+  - ui-review
+  - motion
+  - design
+  use_cases:
+  - Audit an existing interface for hierarchy and usability.
+  - Polish spacing, typography, responsive behavior, and purposeful motion.
+  use_cases_zh:
+  - 审查现有界面的视觉层级和可用性。
+  - 打磨间距、字体、响应式适配和有目的的动效。
+  install:
+    command: npx impeccable install
+    documentation_url: https://github.com/pbakaus/impeccable#installation
+    notes: Run at the project root and choose the detected harness and project/global scope. Upstream
+      supplies a launcher and engine; follow its harness trust/hook setup and reload instructions.
+    notes_zh: 在项目根目录运行，选择检测到的 Agent 和项目/全局范围。上游提供启动器与执行引擎，安装后请按其说明完成对应工具的信任、Hook 设置并重新加载。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Indexed the current unified impeccable skill at .agents/skills/impeccable/SKILL.md. The
+    project now exposes audit, critique, polish, animate and other commands through this skill; older
+    frontend-design paths are not assumed.
+  review_notes_zh: 使用当前统一入口 .agents/skills/impeccable/SKILL.md，审查、评议、打磨和动效等能力通过此 Skill 的子命令提供，没有假定旧 frontend-design
+    路径仍然适用。
+- id: domain-modeling
+  name: Domain Modeling
+  category: backend
+  description: Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs.
+  description_zh: 澄清领域术语、推敲边界场景，并维护术语表与架构决策记录。
+  repository: mattpocock/skills
+  skill_path: skills/engineering/domain-modeling/SKILL.md
+  skill_url: https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md
+  upstream_name: domain-modeling
+  source_commit: d80fa0f4ebe0c5714af0adf8670336065233ecc6
+  skill_updated_at: '2026-09-17T08:29:58Z'
+  tags:
+  - backend
+  - domain-modeling
+  - architecture
+  use_cases:
+  - Align business terms with code and domain boundaries.
+  - Record resolved terminology and architectural decisions.
+  use_cases_zh:
+  - 对齐业务术语、代码与领域边界。
+  - 记录已确定的术语和架构决策。
+  install:
+    command: npx skills@latest add mattpocock/skills
+    documentation_url: https://github.com/mattpocock/skills#installation-30-second-setup
+    notes: Upstream documents omitting -a to choose the agent interactively. Select domain-modeling and
+      include setup-matt-pocock-skills as requested by upstream, then follow its one-time setup. Choose
+      one installation method per agent to avoid duplicates.
+    notes_zh: 上游说明可省略 -a 交互选择 Agent。选择 domain-modeling，并按上游要求加入 setup-matt-pocock-skills，随后完成一次性设置。每个
+      Agent 只选一种安装方式以免重复。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Resolved the candidate to skills/engineering/domain-modeling/SKILL.md. Its actual focus
+    is evolving domain language, GLOSSARY.md and ADRs, not generating a complete backend architecture.
+    Backend is an editorial classification; the practices apply more broadly.
+  review_notes_zh: 核实路径为 skills/engineering/domain-modeling/SKILL.md。实际重点是领域语言、GLOSSARY.md 与 ADR，不应描述为自动生成完整后端架构。后端是本目录的编辑分类，其方法也适用于其他场景。
+- id: api-and-interface-design
+  name: API and Interface Design
+  category: backend
+  description: Contract-first interfaces, compatibility, boundary validation, and error semantics.
+  description_zh: 指导契约优先的接口设计、兼容性、边界校验与错误语义。
+  repository: addyosmani/agent-skills
+  skill_path: skills/api-and-interface-design/SKILL.md
+  skill_url: https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md
+  upstream_name: api-and-interface-design
+  source_commit: 5f7865623e92bba6462e2ee5c3c629998d4e0ddf
+  skill_updated_at: '2026-10-02T11:31:25Z'
+  tags:
+  - backend
+  - api
+  - contracts
+  use_cases:
+  - Design REST or GraphQL endpoints and module contracts.
+  - Plan compatible changes and consistent error handling.
+  use_cases_zh:
+  - 设计 REST、GraphQL 端点与模块契约。
+  - 规划兼容性变更与一致的错误处理。
+  install:
+    command: npx skills add addyosmani/agent-skills
+    documentation_url: https://github.com/addyosmani/agent-skills#quick-start
+    notes: Upstream repository-level installation includes the collection. Individual --skill installs
+      may omit the repository-level shared references directory; prefer the documented full-repository/native
+      plugin integration when those checklists matter.
+    notes_zh: 上游仓库级安装会包含整个集合。单独使用 --skill 安装可能缺少仓库级共享 references 目录，需要完整检查清单时请采用上游仓库或原生插件整合方式。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Confirmed skills/api-and-interface-design/SKILL.md. Upstream documents repository-level
+    npx installation and warns that individual-skill installs omit shared repository references. No installation
+    or effectiveness test was performed.
+  review_notes_zh: 核实路径 skills/api-and-interface-design/SKILL.md。上游明确记录仓库级 npx 安装，同时提醒单 Skill 安装可能缺少共享参考资料。未执行安装或效果测试。
+- id: api-design-reviewer
+  name: API Design Reviewer
+  category: backend
+  description: Review REST conventions and OpenAPI contracts with linting and breaking-change checks.
+  description_zh: 结合检查工具审查 REST 规范、OpenAPI 契约与破坏性变更。
+  repository: alirezarezvani/claude-skills
+  skill_path: engineering/skills/api-design-reviewer/SKILL.md
+  skill_url: https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md
+  upstream_name: api-design-reviewer
+  source_commit: aecfb8e0bb71dbf1413082f86b33a5c4c9b8f416
+  skill_updated_at: '2026-06-11T03:58:41Z'
+  tags:
+  - backend
+  - api
+  - review
+  - openapi
+  use_cases:
+  - Review a pull request changing API endpoints.
+  - Compare OpenAPI versions for compatibility risks.
+  use_cases_zh:
+  - 审查修改 API 端点的 PR。
+  - 对比 OpenAPI 版本，评估兼容性风险。
+  install:
+    command: '/plugin marketplace add alirezarezvani/claude-skills
+
+      /plugin install engineering-advanced-skills@claude-code-skills'
+    documentation_url: https://github.com/alirezarezvani/claude-skills#quick-install
+    notes: Enter in Claude Code; this installs the advanced engineering bundle. Upstream also documents
+      cloning and copying the complete skill folder, including scripts and references, for manual installation.
+    notes_zh: 在 Claude Code 内输入，安装的是高级工程插件包。上游也说明可克隆后手动复制完整 Skill 目录，包括脚本与参考文件。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Actual current path is engineering/skills/api-design-reviewer/SKILL.md, including the
+    nested skills directory. The README documents the advanced engineering plugin bundle. Bundled tool
+    claims were inspected but not benchmarked or executed.
+  review_notes_zh: 当前实际路径是 engineering/skills/api-design-reviewer/SKILL.md，包含中间 skills 目录。README 提供高级工程插件包安装说明。已阅读配套工具的功能说明，但未执行或评测。
+- id: database-designer
+  name: Database Designer
+  category: database
+  description: Schema modeling, index analysis, relationships, and migration planning.
+  description_zh: 辅助 Schema 建模、索引分析、关系设计和迁移规划。
+  repository: alirezarezvani/claude-skills
+  skill_path: engineering/skills/database-designer/SKILL.md
+  skill_url: https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/database-designer/SKILL.md
+  upstream_name: database-designer
+  source_commit: aecfb8e0bb71dbf1413082f86b33a5c4c9b8f416
+  skill_updated_at: '2026-06-11T03:58:41Z'
+  tags:
+  - database
+  - schema
+  - indexes
+  - migrations
+  use_cases:
+  - Review tables, constraints, and query-driven indexes.
+  - Plan schema evolution and rollback strategies.
+  use_cases_zh:
+  - 审查表结构、约束与查询驱动的索引。
+  - 规划 Schema 演进与回滚策略。
+  install:
+    command: '/plugin marketplace add alirezarezvani/claude-skills
+
+      /plugin install engineering-advanced-skills@claude-code-skills'
+    documentation_url: https://github.com/alirezarezvani/claude-skills#quick-install
+    notes: Enter in Claude Code; this installs the advanced engineering bundle. Upstream also documents
+      cloning and copying the complete skill folder, including scripts and references, for manual installation.
+    notes_zh: 在 Claude Code 内输入，安装的是高级工程插件包。上游也说明可克隆后手动复制完整 Skill 目录，包括脚本与参考文件。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Actual current path is engineering/skills/database-designer/SKILL.md, including the nested
+    skills directory. The README documents the advanced engineering plugin bundle. Bundled tool claims
+    were inspected but not benchmarked or executed.
+  review_notes_zh: 当前实际路径是 engineering/skills/database-designer/SKILL.md，包含中间 skills 目录。README 提供高级工程插件包安装说明。已阅读配套工具的功能说明，但未执行或评测。
+- id: cloud-sql-basics
+  name: Cloud SQL Basics
+  category: database
+  description: Guide Cloud SQL instances, databases, backups, availability, and secure connectivity.
+  description_zh: 指导 Cloud SQL 实例、数据库、备份、可用性与安全连接。
+  repository: google/skills
+  skill_path: skills/cloud/cloud-sql-basics/SKILL.md
+  skill_url: https://github.com/google/skills/blob/main/skills/cloud/cloud-sql-basics/SKILL.md
+  upstream_name: cloud-sql-basics
+  source_commit: dcedfd4d770b27e9586601e7ded26d58c4eb315b
+  skill_updated_at: '2026-10-20T20:10:36Z'
+  tags:
+  - database
+  - cloud-sql
+  - postgresql
+  - mysql
+  - sql-server
+  use_cases:
+  - Explain or provision managed relational database resources.
+  - Plan connectivity, backup, and availability for Cloud SQL.
+  use_cases_zh:
+  - 解释或配置托管关系数据库资源。
+  - 规划 Cloud SQL 的连接、备份与可用性。
+  install:
+    command: npx skills add google/skills
+    documentation_url: https://github.com/google/skills#installation
+    notes: In the interactive installer select cloud-sql-basics, target agent, and scope. Using the skill
+      for real resources also requires Google Cloud credentials, appropriate IAM permissions, and any
+      relevant CLI tooling.
+    notes_zh: 在交互安装器中选择 cloud-sql-basics、目标 Agent 和安装范围。实际管理云资源还需要 Google Cloud 凭据、相应 IAM 权限及相关 CLI。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Resolved to skills/cloud/cloud-sql-basics/SKILL.md. Current upstream covers SQL Server
+    as well as PostgreSQL and MySQL; this is a Google Cloud-specific skill, not a generic local SQL optimizer.
+  review_notes_zh: 实际路径为 skills/cloud/cloud-sql-basics/SKILL.md。除 PostgreSQL、MySQL 外，当前上游也涵盖 SQL Server；它面向
+    Google Cloud，不能当作通用本地 SQL 优化器。
+- id: karpathy-guidelines
+  name: Karpathy Guidelines
+  category: engineering
+  description: Reduce coding mistakes with explicit assumptions, simplicity, focused edits, and verifiable
+    goals.
+  description_zh: 通过明确假设、保持简单、聚焦修改与可验证目标减少编码错误。
+  repository: multica-ai/andrej-karpathy-skills
+  skill_path: skills/karpathy-guidelines/SKILL.md
+  skill_url: https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md
+  upstream_name: karpathy-guidelines
+  source_commit: 64723a49ea6117894304eb491f0d32a60570bf45
+  skill_updated_at: '2026-01-28T00:40:04Z'
+  tags:
+  - engineering
+  - coding-practices
+  - review
+  - simplicity
+  use_cases:
+  - Keep implementation and refactoring within the requested scope.
+  - Define concrete success criteria before making changes.
+  use_cases_zh:
+  - 让实现与重构保持在请求范围内。
+  - 修改前定义可验证的成功标准。
+  install:
+    command: '/plugin marketplace add forrestchang/andrej-karpathy-skills
+
+      /plugin install andrej-karpathy-skills@karpathy-skills'
+    documentation_url: https://github.com/multica-ai/andrej-karpathy-skills#install
+    notes: Enter in Claude Code. These are the exact upstream README commands, which still use the legacy
+      forrestchang owner. The legacy address redirects to multica-ai on GitHub; plugin installation itself
+      has not been executed. Confirm current upstream instructions before use.
+    notes_zh: 在 Claude Code 中输入。这是上游 README 原有命令，仍使用旧 forrestchang 所有者名称；GitHub 旧地址重定向到 multica-ai，但未执行插件安装。使用前请确认上游当前说明。
+  verification:
+    metadata: true
+    installation: true
+    installation_tested: false
+    effectiveness: false
+    last_reviewed: '2026-10-21T05:50:39Z'
+    test_report_url: null
+  review_notes: Added as the tenth entry at the user's request under Engineering Practices, preserving
+    the original 4/3/2 scope. Verified skills/karpathy-guidelines/SKILL.md. This is a community interpretation
+    of Karpathy's observations, not an official Karpathy-authored skill. MIT is declared in frontmatter
+    and README, but no root LICENSE file was found. Legacy install-owner naming is retained with a caveat.
+  review_notes_zh: 按用户追加要求作为第十个条目加入工程实践分类，保留原定 4/3/2 范围。核实 skills/karpathy-guidelines/SKILL.md。它是社区对 Karpathy
+    观点的整理，并非 Karpathy 本人发布的官方 Skill。frontmatter 和 README 声明 MIT，但未找到根目录 LICENSE；安装命令保留上游旧所有者名称并注明限制。

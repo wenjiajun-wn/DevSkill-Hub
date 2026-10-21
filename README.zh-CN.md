@@ -12,6 +12,8 @@
 **v0.1.0 · 10 个 Skills · 8 个来源仓库**
 
 前端开发 4 / 后端开发 3 / 数据库开发 2 / 工程实践 1
+
+10 个条目通过隔离安装冒烟检查；[实测范围与限制](docs/evaluations/functional-smoke.md)包含已发现的上游缺陷。
 <!-- END summary -->
 
 [前端](#frontend) · [后端](#backend) · [数据库](#database) · [工程实践](#engineering) · [开始使用](docs/getting-started.md) · [参与贡献](CONTRIBUTING.md)
@@ -32,11 +34,12 @@ Agent Skills 以 `SKILL.md` 为入口，将任务说明、参考资料和可选�
 例如，上游提供以下安装入口 ([来源](https://github.com/addyosmani/agent-skills#quick-start)):
 
 ```text
-npx skills add addyosmani/agent-skills
+/plugin marketplace add addyosmani/agent-skills
+/plugin install agent-skills@addy-agent-skills
 ```
 <!-- END quick-install -->
 
-这是仓库级安装入口，不能理解为只安装某一个 Skill。请先阅读[安装指南](docs/how-to-install.md)，尤其是上游关于单 Skill 安装可能缺少共享参考资料的说明。`/plugin` 命令应在 Claude Code 内输入，不是终端命令。
+这会安装包含多个 Skill 的插件包。请先阅读[安装指南](docs/how-to-install.md)，尤其是上游关于单 Skill 安装可能缺少共享参考资料的说明。`/plugin` 命令在 Claude Code 内输入；隔离安装实测使用等价的原生 CLI，并指定项目范围。
 
 ## 如何理解验证状态？
 
@@ -47,7 +50,7 @@ npx skills add addyosmani/agent-skills
 参见[评估标准](docs/evaluation-criteria.md)和[上游核查记录](docs/verification.md)。Star 只是来源仓库的受欢迎程度，不能替代质量评测。
 
 <!-- BEGIN catalog -->
-Star 数据采集时间（UTC）：**2026-10-21T05:55:49Z**。
+Star 数据采集时间（UTC）：**2026-10-21T07:14:28Z**。
 
 Stars 属于来源仓库；它不是单个 Skill 的评分，也不代表实际效果。N/A 表示没有已验证数据。
 
@@ -57,7 +60,7 @@ Stars 属于来源仓库；它不是单个 Skill 的评分，也不代表实际�
 
 | 排名 | Skill | 简介 | 仓库 Stars | 安装 |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | 指导有辨识度的视觉风格、字体排版与界面设计。 | [182.5k](https://github.com/anthropics/skills) | [安装](catalog/frontend.md#frontend-design) |
+| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | 指导有辨识度的视觉风格、字体排版与界面设计。 | [182.6k](https://github.com/anthropics/skills) | [安装](catalog/frontend.md#frontend-design) |
 | 2 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) | 提供可检索的配色、字体、无障碍与多技术栈界面设计指导。 | [138.1k](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | [安装](catalog/frontend.md#ui-ux-pro-max) |
 | 3 | [Frontend UI Engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) | 涵盖组件架构、响应式布局、状态管理与无障碍界面。 | [109.1k](https://github.com/addyosmani/agent-skills) | [安装](catalog/frontend.md#frontend-ui-engineering) |
 | 4 | [Impeccable](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) | 通过设计工作流审查、评议、打磨界面并完善动效。 | [84.0k](https://github.com/pbakaus/impeccable) | [安装](catalog/frontend.md#impeccable) |
@@ -68,7 +71,7 @@ Stars 属于来源仓库；它不是单个 Skill 的评分，也不代表实际�
 
 | 排名 | Skill | 简介 | 仓库 Stars | 安装 |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | 澄清领域术语、推敲边界场景，并维护术语表与架构决策记录。 | [298.9k](https://github.com/mattpocock/skills) | [安装](catalog/backend.md#domain-modeling) |
+| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | 澄清领域术语、推敲边界场景，并维护术语表与架构决策记录。 | [299.0k](https://github.com/mattpocock/skills) | [安装](catalog/backend.md#domain-modeling) |
 | 2 | [API and Interface Design](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) | 指导契约优先的接口设计、兼容性、边界校验与错误语义。 | [109.1k](https://github.com/addyosmani/agent-skills) | [安装](catalog/backend.md#api-and-interface-design) |
 | 3 | [API Design Reviewer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) | 结合检查工具审查 REST 规范、OpenAPI 契约与破坏性变更。 | [28.5k](https://github.com/alirezarezvani/claude-skills) | [安装](catalog/backend.md#api-design-reviewer) |
 
@@ -111,8 +114,8 @@ python scripts/update_stars.py
 
 ## 关于第一版
 
-阅读[中文介绍](docs/blog/introducing-devskill-hub.zh-CN.md)或[英文介绍](docs/blog/introducing-devskill-hub.md)。第一版包含原定的九个分类候选，以及后续加入的 Karpathy Guidelines。可复现效果评测和更多分类属于后续计划，当前尚未提供。
+阅读[中文介绍](docs/blog/introducing-devskill-hub.zh-CN.md)或[英文介绍](docs/blog/introducing-devskill-hub.md)。第一版包含原定的九个分类候选，以及后续加入的 Karpathy Guidelines。目前已有[安装与功能冒烟证据](docs/evaluations/installation-smoke.md)，对照模型评估和更多分类仍属于后续计划。
 
 ## 许可证与署名
 
-本项目原创代码和文档使用 [MIT License](LICENSE)，发布前需要维护者填写版权持有人。第三方项目保留各自许可证，包括文件级例外及证据不完整的情况；详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。收录不代表上游作者对本项目的官方认可。
+本项目原创代码和文档使用 [MIT License](LICENSE)，署名为已核实的仓库所有者 `wenjiajun-wn`。第三方项目保留各自许可证，包括文件级例外及证据不完整的情况；详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。收录不代表上游作者对本项目的官方认可。

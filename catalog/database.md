@@ -23,11 +23,11 @@ Schema modeling, index analysis, relationships, and migration planning.
 
 **Source / 来源:** [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) · [SKILL.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/database-designer/SKILL.md) · [reviewed revision](https://github.com/alirezarezvani/claude-skills/blob/aecfb8e0bb71dbf1413082f86b33a5c4c9b8f416/engineering/skills/database-designer/SKILL.md)
 
-**Stars:** 28459 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 28463 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [MIT](https://github.com/alirezarezvani/claude-skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
-**Skill last modified (UTC):** 2026-06-11T03:58:41Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-06-11T03:58:41Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -46,15 +46,17 @@ Schema modeling, index analysis, relationships, and migration planning.
 
 [Upstream instructions / 上游安装说明](https://github.com/alirezarezvani/claude-skills#quick-install)
 
-Enter in Claude Code; this installs the advanced engineering bundle. Upstream also documents cloning and copying the complete skill folder, including scripts and references, for manual installation.
+Enter in Claude Code. The advanced engineering bundle was actually installed, including its tools. A full clone timed out; the official CLI sparse option for .claude-plugin and engineering directories succeeded. See the report for version and scope. Functional testing found that SQL parsing missed a table-level foreign key; structured JSON input passed the same relationship check. Cross-check SQL results against the database engine.
 
-在 Claude Code 内输入，安装的是高级工程插件包。上游也说明可克隆后手动复制完整 Skill 目录，包括脚本与参考文件。
+在 Claude Code 内输入。高级工程插件包及工具已实际安装。全仓库克隆超时后，使用官方 CLI 对 .claude-plugin 和 engineering 目录稀疏检出成功；版本和范围见报告。 功能实测发现 SQL 解析漏报表级外键；结构化 JSON 输入通过同一关系检查。请对照数据库引擎核查 SQL 分析结果。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Actual current path is engineering/skills/database-designer/SKILL.md, including the nested skills directory. The README documents the advanced engineering plugin bundle. Bundled tool claims were inspected but not benchmarked or executed.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#database-designer) · [Scoped tool-smoke evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#database-designer)
 
-当前实际路径是 engineering/skills/database-designer/SKILL.md，包含中间 skills 目录。README 提供高级工程插件包安装说明。已阅读配套工具的功能说明，但未执行或评测。
+Actual current path is engineering/skills/database-designer/SKILL.md, including the nested skills directory. The README documents the advanced engineering plugin bundle. Initial review covered bundled tool descriptions; subsequent executable smoke observations and limitations are in the linked functional report. Follow-up: installation executed in an isolated project; bounded tool-smoke evidence is linked separately. Comparative effectiveness is not certified.
+
+当前实际路径是 engineering/skills/database-designer/SKILL.md，包含中间 skills 目录。README 提供高级工程插件包安装说明。已阅读配套工具的功能说明，但当时未执行；后续冒烟结果另附。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。
 
 <a id="cloud-sql-basics"></a>
 
@@ -66,11 +68,11 @@ Guide Cloud SQL instances, databases, backups, availability, and secure connecti
 
 **Source / 来源:** [google/skills](https://github.com/google/skills) · [SKILL.md](https://github.com/google/skills/blob/main/skills/cloud/cloud-sql-basics/SKILL.md) · [reviewed revision](https://github.com/google/skills/blob/dcedfd4d770b27e9586601e7ded26d58c4eb315b/skills/cloud/cloud-sql-basics/SKILL.md)
 
-**Stars:** 21453 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 21456 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [Apache-2.0](https://github.com/google/skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
-**Skill last modified (UTC):** 2026-10-20T20:10:36Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-10-20T20:10:36Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -92,8 +94,10 @@ In the interactive installer select cloud-sql-basics, target agent, and scope. U
 
 在交互安装器中选择 cloud-sql-basics、目标 Agent 和安装范围。实际管理云资源还需要 Google Cloud 凭据、相应 IAM 权限及相关 CLI。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Resolved to skills/cloud/cloud-sql-basics/SKILL.md. Current upstream covers SQL Server as well as PostgreSQL and MySQL; this is a Google Cloud-specific skill, not a generic local SQL optimizer.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#cloud-sql-basics) · [Scoped manual-walkthrough evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#cloud-sql-basics)
 
-实际路径为 skills/cloud/cloud-sql-basics/SKILL.md。除 PostgreSQL、MySQL 外，当前上游也涵盖 SQL Server；它面向 Google Cloud，不能当作通用本地 SQL 优化器。
+Resolved to skills/cloud/cloud-sql-basics/SKILL.md. Current upstream covers SQL Server as well as PostgreSQL and MySQL; this is a Google Cloud-specific skill, not a generic local SQL optimizer. Follow-up: installation executed in an isolated project; bounded manual-walkthrough evidence is linked separately. Comparative effectiveness is not certified.
+
+实际路径为 skills/cloud/cloud-sql-basics/SKILL.md。除 PostgreSQL、MySQL 外，当前上游也涵盖 SQL Server；它面向 Google Cloud，不能当作通用本地 SQL 优化器。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。

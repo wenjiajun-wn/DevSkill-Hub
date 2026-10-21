@@ -52,3 +52,7 @@ A daily GitHub Actions workflow refreshes repository stars and proposes changes 
 Future work should make quality claims more useful: reproducible evaluation tasks, installation smoke tests in disposable environments, and a documented review cadence. Broader coverage can follow when a candidate has a clear use case and verifiable upstream evidence. These are roadmap items, not released features.
 
 The most useful contribution today may be a corrected path, an installation caveat, or a small task with a reproducible outcome. Read [the contribution guide](../../CONTRIBUTING.md), share the source evidence, and help keep the directory accurate.
+
+## Follow-up validation
+
+The initial review described above preceded execution testing. The project now includes [actual installation smoke evidence](../evaluations/installation-smoke.md), [bounded functional observations](../evaluations/functional-smoke.md), and [weekly upstream-change detection](../upstream-status.md). Canonical Karpathy installation was tested; complete root license terms remain unavailable. A database SQL-parser limitation is disclosed in the report. These checks do not certify comparative model effectiveness.

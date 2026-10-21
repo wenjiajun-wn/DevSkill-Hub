@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-21T07:10:44+00:00",
+  "acceptance": {
+    "ui-search": true,
+    "api-lint": true,
+    "api-breaking-change": true,
+    "database-schema": false,
+    "database-json": true,
+    "ui-detector": true
+  },
+  "observations": {
+    "ui_search_results": 3,
+    "api_lint_issues": 9,
+    "breaking_changes": 1,
+    "sql_tables": 2,
+    "sql_foreign_keys": 0,
+    "sqlite_verified_foreign_keys": 1,
+    "json_foreign_keys": 1,
+    "ui_findings": 4
+  },
+  "scope": "Offline tool smoke checks; no model comparison, rendered browser review, or cloud provisioning."
+}

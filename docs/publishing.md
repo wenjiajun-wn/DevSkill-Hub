@@ -6,9 +6,9 @@ The project has been prepared locally. No remote repository, push, or release is
 
 ## Before publication
 
-1. Fill in the copyright-holder field in [LICENSE](../LICENSE). The project has no invented author identity.
-2. Add a private reporting contact to [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md).
-3. Review the [verification record](verification.md), including Karpathy's incomplete license evidence and legacy installer naming. Upstream installation and output effectiveness have not been tested here.
+1. Confirm the copyright-holder field in [LICENSE](../LICENSE), currently the verified repository-owner handle `wenjiajun-wn`.
+2. Review [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md). This project deliberately does not provide a separate private reporting contact; GitHub's content-reporting route remains available.
+3. Review the [verification record](verification.md) and [installation/functional smoke evidence](evaluations/installation-smoke.md), including Karpathy's incomplete license evidence and the database SQL-parser limitation. Comparative model effectiveness remains untested.
 4. Run the checks below. Consider refreshing stars if the snapshot is old.
 
 ```bash
@@ -48,6 +48,8 @@ In the repository's **Settings → Actions → General**, allow the configured a
 The validation workflow has `contents: read`. The scheduled update job grants only `contents: write` and `pull-requests: write`, required to maintain its dedicated branch and PR. It does not push updates to the default branch. It reuses `automation/update-stars` rather than opening a new branch for every snapshot. The schedule is 03:17 UTC daily (11:17 in China); GitHub may delay scheduled runs.
 
 After publication, use **Actions → Update repository stars → Run workflow** for the first run. Inspect the diff and merge the PR manually. Successful refreshes update the observation timestamp even if counts are unchanged, so daily snapshots can produce timestamp-only diffs.
+
+The separate **Check upstream changes** workflow runs weekly on Mondays at 03:43 UTC (11:43 in China). It compares skill directories, README/plugin metadata, and license paths with the recorded YAML baselines, proposing `docs/upstream-status.md` changes on `automation/upstream-review`. It does not update review claims or merge its PR. An unchanged report produces no new PR. See the [current upstream report](upstream-status.md).
 
 GitHub's current documentation says that `pull_request` events for opened, synchronized, or reopened PRs created with `GITHUB_TOKEN` can create workflow runs in an **approval-required** state. A user with write access can select **Approve workflows to run** on the PR. Push events created with that token do not trigger a fresh workflow. The update job also runs validation, rendering checks, link checks, and tests **before** creating the PR. If branch protection requires a separate status check, approve the pending run, run validation manually on the automation branch, or use a suitable GitHub App token under your policy.
 

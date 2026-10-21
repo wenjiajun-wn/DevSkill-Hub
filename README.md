@@ -12,6 +12,8 @@ A curated collection of high-quality Agent Skills for frontend, backend, databas
 **v0.1.0 · 10 skills · 8 source repositories**
 
 Frontend Development 4 / Backend Development 3 / Database Development 2 / Engineering Practices 1
+
+10 entries passed isolated installation smoke checks. Read the [evaluation scope and limitations](docs/evaluations/functional-smoke.md), including known upstream issues.
 <!-- END summary -->
 
 [Frontend](#frontend) · [Backend](#backend) · [Database](#database) · [Engineering](#engineering) · [Getting started](docs/getting-started.md) · [Contributing](CONTRIBUTING.md)
@@ -32,11 +34,12 @@ Finding useful skills means checking scattered repositories, changing paths, ins
 For example, upstream documents this installation entry point ([source](https://github.com/addyosmani/agent-skills#quick-start)):
 
 ```text
-npx skills add addyosmani/agent-skills
+/plugin marketplace add addyosmani/agent-skills
+/plugin install agent-skills@addy-agent-skills
 ```
 <!-- END quick-install -->
 
-This is a repository-level installer, not a promise to install only one skill. Read the [installation guide](docs/how-to-install.md), including the upstream warning about supplementary shared references in individual-skill installs. Claude Code plugin commands must be entered inside Claude Code; they are not shell commands.
+This installs a plugin bundle containing multiple skills. Read the [installation guide](docs/how-to-install.md), including the upstream warning about supplementary shared references in individual-skill installs. Enter the `/plugin` commands inside Claude Code; installation smoke tests use the equivalent native CLI with project scope.
 
 ## Read the verification labels
 
@@ -47,7 +50,7 @@ This is a repository-level installer, not a promise to install only one skill. R
 See [evaluation criteria](docs/evaluation-criteria.md) and the [verification record](docs/verification.md). Popularity is one navigation aid, not a quality benchmark.
 
 <!-- BEGIN catalog -->
-Stars observed (UTC): **2026-10-21T05:55:49Z**.
+Stars observed (UTC): **2026-10-21T07:14:28Z**.
 
 Stars belong to the source repository, not the individual skill. They measure popularity, not effectiveness. N/A means no verified data.
 
@@ -57,7 +60,7 @@ Stars belong to the source repository, not the individual skill. They measure po
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | Distinctive visual direction, typography, and intentional interface design. | [182.5k](https://github.com/anthropics/skills) | [Install](catalog/frontend.md#frontend-design) |
+| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | Distinctive visual direction, typography, and intentional interface design. | [182.6k](https://github.com/anthropics/skills) | [Install](catalog/frontend.md#frontend-design) |
 | 2 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) | Searchable design guidance for palettes, typography, accessibility, and frontend stacks. | [138.1k](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | [Install](catalog/frontend.md#ui-ux-pro-max) |
 | 3 | [Frontend UI Engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) | Component architecture, responsive layouts, state management, and accessible UI. | [109.1k](https://github.com/addyosmani/agent-skills) | [Install](catalog/frontend.md#frontend-ui-engineering) |
 | 4 | [Impeccable](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) | Audit, critique, polish, and animate interfaces with a focused design workflow. | [84.0k](https://github.com/pbakaus/impeccable) | [Install](catalog/frontend.md#impeccable) |
@@ -68,7 +71,7 @@ Stars belong to the source repository, not the individual skill. They measure po
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs. | [298.9k](https://github.com/mattpocock/skills) | [Install](catalog/backend.md#domain-modeling) |
+| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs. | [299.0k](https://github.com/mattpocock/skills) | [Install](catalog/backend.md#domain-modeling) |
 | 2 | [API and Interface Design](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) | Contract-first interfaces, compatibility, boundary validation, and error semantics. | [109.1k](https://github.com/addyosmani/agent-skills) | [Install](catalog/backend.md#api-and-interface-design) |
 | 3 | [API Design Reviewer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) | Review REST conventions and OpenAPI contracts with linting and breaking-change checks. | [28.5k](https://github.com/alirezarezvani/claude-skills) | [Install](catalog/backend.md#api-design-reviewer) |
 
@@ -111,8 +114,8 @@ Set `GH_TOKEN` or `GITHUB_TOKEN` in your environment for authenticated GitHub AP
 
 ## About the first release
 
-Read the [English introduction](docs/blog/introducing-devskill-hub.md) or [中文介绍](docs/blog/introducing-devskill-hub.zh-CN.md). The first release covers the original nine category candidates plus the subsequently requested Karpathy Guidelines entry. Future work includes reproducible evaluations and broader coverage; those are not available yet.
+Read the [English introduction](docs/blog/introducing-devskill-hub.md) or [中文介绍](docs/blog/introducing-devskill-hub.zh-CN.md). The first release covers the original nine category candidates plus the subsequently requested Karpathy Guidelines entry. [Installation and functional smoke evidence](docs/evaluations/installation-smoke.md) is now available. Comparative model evaluations and broader coverage remain future work.
 
 ## License & attribution
 
-Original code and documentation use the [MIT License](LICENSE). The copyright-holder field must be filled in by the maintainer before publication. Upstream projects retain their own licenses, including file-level exceptions and incomplete licensing evidence. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Inclusion does not imply endorsement by upstream authors.
+Original code and documentation use the [MIT License](LICENSE), attributed to the verified repository owner `wenjiajun-wn`. Upstream projects retain their own licenses, including file-level exceptions and incomplete licensing evidence. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Inclusion does not imply endorsement by upstream authors.

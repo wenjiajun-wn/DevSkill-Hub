@@ -1,31 +1,35 @@
-# Implementation validation record
+# Maintenance validation record
 
-Validation performed on 2026-10-21 for the initial v0.1.0 working copy.
+Follow-up validation performed on 2026-10-21 for DevSkill Hub v0.1.0. The initial release had 39 tests; the follow-up adds regression coverage and actual installation/tool observations.
 
-| Check | Observed result |
+| Check | Result |
 | --- | --- |
-| Runtime | Python 3.13.13, PyYAML 6.0.3 |
-| Catalog | 10 skills, 8 unique source repositories; original 4 frontend / 3 backend / 2 database entries plus 1 engineering entry |
-| Schema and ordering | Passed `python scripts/validate_catalog.py` |
-| Generated documentation | Passed `python scripts/render_catalog.py --check`; 10 generated files or marked-file sections synchronized |
-| Unit tests | 39 tests passed with `python -m unittest discover -s tests -v` |
-| Markdown | 300 references passed local target/anchor and external HTTPS syntax checks |
-| External reachability | 39 distinct external URLs returned HTTP 200 after retrying 6 TLS handshake timeouts; fragments excluded from HTTP reachability requests |
-| Upstream installation anchors | All 10 checked against the inspected upstream README contents |
-| Live star refresh | `python scripts/update_stars.py` successfully fetched each of 8 repositories once and updated YAML plus generated pages |
-| Workflow files | Parsed as YAML; referenced action versions verified through GitHub API and pinned to commit SHAs |
-| Credential/privacy scan | No matching token/private-key patterns or local user-path identifiers found in deliverable files |
+| Runtime | Python 3.13.13; PyYAML 6.0.3; Node.js 22.23.1 |
+| Catalog | 10 skills, 8 source repositories; original 4 / 3 / 2 entries plus 1 engineering entry |
+| Schema, ordering, evidence fields | `python scripts/validate_catalog.py` passes |
+| Generated documentation | `python scripts/render_catalog.py --check` passes |
+| Offline unit tests | 51 tests pass with `python -m unittest discover -s tests -v` |
+| Multi-file writes | Failure rollback, new-file removal, interrupted-write recovery, committed-journal handling, recovery retry, and writer serialization covered |
+| Live star refresh | Updated YAML and all generated pages with the recoverable transaction writer |
+| Upstream monitoring | 8 live repository trees checked against recorded directory/file hashes; no monitored drift at the follow-up check |
+| Installation execution | All 10 entries passed installed-file identity and supporting-resource checks in isolated Windows projects |
+| Functional tools | UI retrieval, API linting/breaking-change detection, JSON schema analysis, and Impeccable detection executed |
+| Known upstream defect | SQL schema analyzer missed a foreign key confirmed by SQLite; the equivalent JSON input passed |
+| Hosted validation | Initial [GitHub validation run](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39554960708) succeeded; follow-up CI is checked before completion |
+| Star-update automation | [Actual update run](https://github.com/wenjiajun-wn/DevSkill-Hub/actions/runs/39556064054) succeeded and created [PR #1](https://github.com/wenjiajun-wn/DevSkill-Hub/pull/1) |
 
-The final star snapshot for this validation run is **2026-10-21T05:55:49Z** (13:55:49 China Standard Time). Current values live in [catalog/skills.yaml](../catalog/skills.yaml) and may change during later updates. Schema validation, unit tests, rendering checks, and local link checks work offline; the star updater needs GitHub API access.
+Read the [installation evidence](evaluations/installation-smoke.md), [functional scope and limitations](evaluations/functional-smoke.md), [upstream report](upstream-status.md), and [verification records](verification.md). Star timestamps and values are maintained in [catalog/skills.yaml](../catalog/skills.yaml), independently of content reviews.
 
-Tests cover duplicate YAML keys and IDs, malformed data, invalid URLs and timestamps, missing required fields, boolean/count confusion, category ordering, unknown stars and ties, shared-repository deduplication, rate limits, 404s, retry limits, malformed API responses, dry runs, failure preservation, token precedence, source-review date preservation, generated-file drift, and local link errors.
+## Recovery semantics
 
-## Verification limits
+The maintenance tools take one writer lock, stage the entire batch, and journal original file contents before replacements. A normal failure rolls back changed files. If restoration itself is blocked, backups and the journal are retained and the command fails with recovery instructions. After a hard process interruption the next maintenance run restores the old batch, or preserves a batch whose commit marker was already recorded. Individual replacements are atomic; independent readers can briefly see intermediate files. No claim of a filesystem-wide atomic transaction or guaranteed recovery after storage loss is made.
 
-- GitHub Actions has not run on a hosted repository because publication has not been requested. Permissions, organization policy, and PR creation need confirmation after publication.
-- This registry's own maintenance tools have been tested. Third-party installation commands and skill effectiveness have not been executed or evaluated; their separate flags remain false.
-- Karpathy Guidelines declares MIT in its README and skill frontmatter, but no root LICENSE file was found. Its installation documentation uses a legacy owner name; the GitHub repository redirect was checked, but plugin installation was not.
-- The copyright holder and a private community-reporting contact remain for the maintainer to supply. See [publishing instructions](publishing.md).
-- Link status is an observation at validation time, not a promise of future availability. The offline link checker does not make network requests.
+## Boundaries and project decisions
 
-At the time of initial validation, no remote repository had been created, no commits had been pushed, and no release had been published. Temporary upstream content used during inspection was removed; the shipped directory contains original summaries and links. Subsequent publication is a separate maintainer action.
+- The verified GitHub owner handle `wenjiajun-wn` fills the MIT copyright attribution.
+- The maintainer explicitly chose not to add a private reporting contact. The code of conduct uses GitHub's content-reporting route and does not treat a missing contact as unfinished work.
+- Karpathy's canonical repository address successfully installed. Its README/frontmatter declare MIT, but a complete root LICENSE remains absent; this is explicitly marked as declaration-only evidence. No upstream license was fabricated or modified.
+- Installation smoke checks do not prove automatic model activation or comparative usefulness. Four entries have executable helper-tool observations; six have labeled manual walkthroughs. No comparative effectiveness flag has been set true.
+- No paid model sessions or cloud resources were provisioned. Cloud SQL was installed and reviewed offline; live cloud connectivity, backups, and recovery remain outside the recorded test scope.
+- Upstream drift detection proposes review findings. It does not silently reset hashes, renew review claims, approve PRs, or merge changes.
+- Temporary upstream source files and installer caches are ignored by Git and excluded from publication. The repository contains original fixtures, summaries, and sanitized observations.

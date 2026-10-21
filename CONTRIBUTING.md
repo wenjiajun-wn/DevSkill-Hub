@@ -14,7 +14,7 @@ All entry data belongs in [catalog/skills.yaml](catalog/skills.yaml). The normal
 
 - `schema_version` and project `version` describe the catalog schema and release.
 - `categories` defines the four category labels in display order.
-- `repositories` is keyed by `owner/repository`. Store `url`, `default_branch`, repository-level `stars`, `stars_updated_at`, reviewed `updated_at`/`pushed_at`, and scoped `license` evidence once.
+- `repositories` is keyed by `owner/repository`. Store `url`, `default_branch`, repository-level `stars`, `stars_updated_at`, reviewed `updated_at`/`pushed_at`, scoped `license` evidence and `monitoring` once. License `evidence_status` distinguishes `license-file-reviewed` from `declaration-only`. Monitoring stores `reviewed_at` and `files` (path to Git blob/tree SHA, or null for an expected-missing path).
 - `skills` references a repository key. Each entry needs a stable kebab-case `id`, display `name`, `category`, English/Chinese summaries and use cases, `tags`, actual `skill_path`/`skill_url`, `upstream_name`, reviewed `source_commit`, `skill_updated_at`, `install`, `verification`, and review notes in both languages.
 
 Use an existing entry as the complete example. For unverified facts use null, not a guessed path, zero stars, or an invented command. A missing star count requires a null observation timestamp. An unreviewed installation command must be null. `verification.metadata`, `installation`, `installation_tested`, and `effectiveness` are separate booleans. Keep claims proportional to the evidence.
@@ -62,7 +62,15 @@ Use `GH_TOKEN` or `GITHUB_TOKEN` through the environment if needed. Do not paste
 3. Run the local checks and include relevant results in the PR description.
 4. Explain whether you reviewed documentation, executed an installation, or tested a real task.
 
-For an installation execution claim, set `installation_test_report_url` in `verification` to a public reproducible report. Effectiveness claims require `test_report_url`. Reports should identify source revision, agent/version, environment, exact procedure, outcome, and limitations. Maintainers review claims before merging.
+For an installation execution claim, set `installation_test_report_url` in `verification` to a public reproducible report. Record bounded `smoke_scope` and `smoke_report_url` separately from effectiveness. Effectiveness claims require `test_report_url`. Reports should identify source revision, agent/version, environment, exact procedure, outcome, and limitations. Maintainers review claims before merging.
+
+## Recovery and upstream monitoring
+
+Maintenance writers share a cross-platform lock. They stage all outputs and retain a recovery journal before replacing catalog/pages. Ordinary replacement failures roll back the batch. An interrupted process is recovered before the next maintenance read/write; do not delete `.cache/catalog-transaction` when recovery is pending. Resolve disk permissions/space and rerun `python scripts/render_catalog.py`. Replacements are atomic per file, not simultaneous across unrelated filesystem readers.
+
+Run `python scripts/check_upstreams.py --fail-on-drift` to detect changes in monitored skill directories, installation/plugin metadata, and licensing evidence. The weekly workflow proposes a report only when its contents change. Review upstream changes, rerun relevant smoke checks, then update the YAML baseline and review date in a PR. Never reset hashes merely to silence a warning.
+
+Installation and tool-smoke reproduction commands live in [the installation report](docs/evaluations/installation-smoke.md) and [functional report](docs/evaluations/functional-smoke.md). These network-dependent tests are separate from the fast offline unit-test suite.
 
 ## 中文说明
 

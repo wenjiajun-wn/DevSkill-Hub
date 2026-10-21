@@ -6,7 +6,7 @@
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | Distinctive visual direction, typography, and intentional interface design. | [182.5k](https://github.com/anthropics/skills) | [Install](frontend.md#frontend-design) |
+| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | Distinctive visual direction, typography, and intentional interface design. | [182.6k](https://github.com/anthropics/skills) | [Install](frontend.md#frontend-design) |
 | 2 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) | Searchable design guidance for palettes, typography, accessibility, and frontend stacks. | [138.1k](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | [Install](frontend.md#ui-ux-pro-max) |
 | 3 | [Frontend UI Engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) | Component architecture, responsive layouts, state management, and accessible UI. | [109.1k](https://github.com/addyosmani/agent-skills) | [Install](frontend.md#frontend-ui-engineering) |
 | 4 | [Impeccable](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) | Audit, critique, polish, and animate interfaces with a focused design workflow. | [84.0k](https://github.com/pbakaus/impeccable) | [Install](frontend.md#impeccable) |
@@ -25,11 +25,11 @@ Distinctive visual direction, typography, and intentional interface design.
 
 **Source / 来源:** [anthropics/skills](https://github.com/anthropics/skills) · [SKILL.md](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) · [reviewed revision](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md)
 
-**Stars:** 182547 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 182569 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [Apache-2.0](https://github.com/anthropics/skills/blob/main/skills/frontend-design/LICENSE.txt) (indexed skill only). Frontend Design has a file-level Apache-2.0 license. The repository includes other skills with different terms; its API license field is null.
 
-**Skill last modified (UTC):** 2026-09-03T16:37:13Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-09-03T16:37:13Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -52,11 +52,13 @@ Enter both commands inside Claude Code. This installs the example-skills bundle,
 
 在 Claude Code 内输入两条命令；安装的是包含 Frontend Design 的 example-skills 插件包，并非仅此一个 Skill。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Confirmed skills/frontend-design/SKILL.md. Used the upstream Claude Code marketplace workflow instead of assuming an undocumented npx command. License is verified at skill level.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#frontend-design) · [Scoped manual-walkthrough evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#frontend-design)
 
-实际路径为 skills/frontend-design/SKILL.md。采用上游明确记录的 Claude Code 插件安装方式，未推断未记录的 npx 命令；许可证按此 Skill 单独核查。
+Confirmed skills/frontend-design/SKILL.md. Used the upstream Claude Code marketplace workflow instead of assuming an undocumented npx command. License is verified at skill level. Follow-up: installation executed in an isolated project; bounded manual-walkthrough evidence is linked separately. Comparative effectiveness is not certified.
+
+实际路径为 skills/frontend-design/SKILL.md。采用上游明确记录的 Claude Code 插件安装方式，未推断未记录的 npx 命令；许可证按此 Skill 单独核查。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。
 
 <a id="ui-ux-pro-max"></a>
 
@@ -68,11 +70,11 @@ Searchable design guidance for palettes, typography, accessibility, and frontend
 
 **Source / 来源:** [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) · [SKILL.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) · [reviewed revision](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/a38d04c3d5c298c851dbe5e6ee1965ee3de42cb5/.claude/skills/ui-ux-pro-max/SKILL.md)
 
-**Stars:** 138104 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 138136 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [MIT](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
-**Skill last modified (UTC):** 2026-08-13T17:08:23Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-08-13T17:08:23Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -95,11 +97,13 @@ Run from your project root. The example targets Codex; upstream also documents -
 
 在项目根目录运行，示例面向 Codex；上游另有 --ai claude 和 --ai cursor。需要 Node.js/npm 与 Python 3。CLI 会生成对应平台文件并包含配套数据。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Verified .claude/skills/ui-ux-pro-max/SKILL.md as the committed development copy. Upstream identifies src/ui-ux-pro-max as source data/templates and recommends its CLI for installation. Current npm package is ui-ux-pro-max-cli; older uipro-cli releases are described as stale.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#ui-ux-pro-max) · [Scoped tool-smoke evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#ui-ux-pro-max)
 
-核实 .claude/skills/ui-ux-pro-max/SKILL.md 为仓库内开发版本；src/ui-ux-pro-max 保存源数据和模板，上游推荐 CLI 安装。当前包名为 ui-ux-pro-max-cli，上游已说明旧 uipro-cli 版本过时。
+Verified .claude/skills/ui-ux-pro-max/SKILL.md as the committed development copy. Upstream identifies src/ui-ux-pro-max as source data/templates and recommends its CLI for installation. Current npm package is ui-ux-pro-max-cli; older uipro-cli releases are described as stale. Follow-up: installation executed in an isolated project; bounded tool-smoke evidence is linked separately. Comparative effectiveness is not certified.
+
+核实 .claude/skills/ui-ux-pro-max/SKILL.md 为仓库内开发版本；src/ui-ux-pro-max 保存源数据和模板，上游推荐 CLI 安装。当前包名为 ui-ux-pro-max-cli，上游已说明旧 uipro-cli 版本过时。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。
 
 <a id="frontend-ui-engineering"></a>
 
@@ -111,11 +115,11 @@ Component architecture, responsive layouts, state management, and accessible UI.
 
 **Source / 来源:** [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) · [SKILL.md](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) · [reviewed revision](https://github.com/addyosmani/agent-skills/blob/3e1e0a2db595ab2abe89b1204f7eabb67a24eb90/skills/frontend-ui-engineering/SKILL.md)
 
-**Stars:** 109059 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 109081 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [MIT](https://github.com/addyosmani/agent-skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
-**Skill last modified (UTC):** 2026-10-03T15:35:42Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-10-03T15:35:42Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -128,20 +132,23 @@ Component architecture, responsive layouts, state management, and accessible UI.
 **Install / 安装**
 
 ```text
-npx skills add addyosmani/agent-skills
+/plugin marketplace add addyosmani/agent-skills
+/plugin install agent-skills@addy-agent-skills
 ```
 
 [Upstream instructions / 上游安装说明](https://github.com/addyosmani/agent-skills#quick-start)
 
-Upstream repository-level installation includes the collection. Individual --skill installs may omit the repository-level shared references directory; prefer the documented full-repository/native plugin integration when those checklists matter.
+Enter in Claude Code. The full plugin was installed in a disposable project with Claude Code 2.1.306 and repository-level references were confirmed present. Individual-skill copies can omit those references; see the installation report for exact tested scope.
 
-上游仓库级安装会包含整个集合。单独使用 --skill 安装可能缺少仓库级共享 references 目录，需要完整检查清单时请采用上游仓库或原生插件整合方式。
+在 Claude Code 内输入。已用 Claude Code 2.1.306 在临时项目安装完整插件，并确认仓库级参考资料存在。单 Skill 复制可能缺少这些资料；实测范围见安装报告。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Confirmed skills/frontend-ui-engineering/SKILL.md. Upstream documents repository-level npx installation and warns that individual-skill installs omit shared repository references. No installation or effectiveness test was performed.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#frontend-ui-engineering) · [Scoped manual-walkthrough evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#frontend-ui-engineering)
 
-核实路径 skills/frontend-ui-engineering/SKILL.md。上游明确记录仓库级 npx 安装，同时提醒单 Skill 安装可能缺少共享参考资料。未执行安装或效果测试。
+Confirmed skills/frontend-ui-engineering/SKILL.md. Upstream documents repository-level npx installation and warns that individual-skill installs omit shared repository references. Initial content review preceded installation testing. Follow-up: installation executed in an isolated project; bounded manual-walkthrough evidence is linked separately. Comparative effectiveness is not certified.
+
+核实路径 skills/frontend-ui-engineering/SKILL.md。上游明确记录仓库级 npx 安装，同时提醒单 Skill 安装可能缺少共享参考资料。初次内容审查早于安装实测。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。
 
 <a id="impeccable"></a>
 
@@ -153,11 +160,11 @@ Audit, critique, polish, and animate interfaces with a focused design workflow.
 
 **Source / 来源:** [pbakaus/impeccable](https://github.com/pbakaus/impeccable) · [SKILL.md](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) · [reviewed revision](https://github.com/pbakaus/impeccable/blob/aeeb3d8c30b5f95aeeb3e893b0f1a308af8fdb8f/.agents/skills/impeccable/SKILL.md)
 
-**Stars:** 83987 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 84013 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [Apache-2.0](https://github.com/pbakaus/impeccable/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
-**Skill last modified (UTC):** 2026-10-19T17:51:07Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-10-19T17:51:07Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -170,17 +177,20 @@ Audit, critique, polish, and animate interfaces with a focused design workflow.
 **Install / 安装**
 
 ```text
-npx impeccable install
+/plugin marketplace add pbakaus/impeccable
+/plugin install impeccable@impeccable
 ```
 
 [Upstream instructions / 上游安装说明](https://github.com/pbakaus/impeccable#installation)
 
-Run at the project root and choose the detected harness and project/global scope. Upstream supplies a launcher and engine; follow its harness trust/hook setup and reload instructions.
+Enter in Claude Code. This documented plugin method passed the isolated installation test. The npx release-bundle installer timed out twice on the test network. The test used the official CLI sparse option for .claude-plugin and plugin directories; no hooks were executed.
 
-在项目根目录运行，选择检测到的 Agent 和项目/全局范围。上游提供启动器与执行引擎，安装后请按其说明完成对应工具的信任、Hook 设置并重新加载。
+在 Claude Code 内输入。该上游插件方式已在隔离安装实测中通过。npx 发布包安装器在测试网络两次超时；实测使用官方 CLI 的稀疏检出参数，仅保留 .claude-plugin 和 plugin 目录，未执行 Hook。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Indexed the current unified impeccable skill at .agents/skills/impeccable/SKILL.md. The project now exposes audit, critique, polish, animate and other commands through this skill; older frontend-design paths are not assumed.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#impeccable) · [Scoped tool-smoke evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#impeccable)
 
-使用当前统一入口 .agents/skills/impeccable/SKILL.md，审查、评议、打磨和动效等能力通过此 Skill 的子命令提供，没有假定旧 frontend-design 路径仍然适用。
+Indexed the current unified impeccable skill at .agents/skills/impeccable/SKILL.md. The project now exposes audit, critique, polish, animate and other commands through this skill; older frontend-design paths are not assumed. Follow-up: installation executed in an isolated project; bounded tool-smoke evidence is linked separately. Comparative effectiveness is not certified.
+
+使用当前统一入口 .agents/skills/impeccable/SKILL.md，审查、评议、打磨和动效等能力通过此 Skill 的子命令提供，没有假定旧 frontend-design 路径仍然适用。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。

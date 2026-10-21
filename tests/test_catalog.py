@@ -4,6 +4,7 @@ from collections import Counter
 from copy import deepcopy
 import io
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -113,6 +114,8 @@ class CatalogTests(unittest.TestCase):
             with self.subTest(flag=flag):
                 broken = deepcopy(self.data)
                 broken["skills"][0]["verification"][flag] = True
+                evidence = "installation_test_report_url" if flag == "installation_tested" else "test_report_url"
+                broken["skills"][0]["verification"][evidence] = None
                 self.assertTrue(validate(broken))
 
     def test_unreviewed_install_command_rejected(self):
@@ -272,13 +275,42 @@ class RefreshTests(unittest.TestCase):
             self.assertTrue(all(m["stars"] == 19 for m in updated["repositories"].values()))
             self.assertEqual(doc.read_text(encoding="utf-8"), "updated\n")
 
+    def test_cli_write_failure_rolls_back_yaml_and_previously_written_page(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "catalog" / "skills.yaml"
+            doc = Path(directory) / "README.md"
+            save_catalog(self.data, path)
+            doc.write_bytes(b"original page\r\n")
+            before = path.read_bytes()
+            real_replace = os.replace
+            failed = False
+
+            def fail_once(source, destination):
+                nonlocal failed
+                if Path(destination) == path and not failed:
+                    failed = True
+                    raise OSError("simulated disk error")
+                return real_replace(source, destination)
+
+            with patch("scripts.update_stars.fetch_repository", return_value=19), \
+                 patch("scripts.update_stars.render_all", return_value={doc: "updated\n"}), \
+                 patch("scripts.transaction.os.replace", side_effect=fail_once), \
+                 patch("sys.stdout", new_callable=io.StringIO), \
+                 patch("sys.stderr", new_callable=io.StringIO):
+                self.assertEqual(update_main(["--catalog", str(path)]), 1)
+            self.assertEqual(path.read_bytes(), before)
+            self.assertEqual(doc.read_bytes(), b"original page\r\n")
+
     def test_gh_token_takes_precedence_over_github_token(self):
-        with patch.dict("os.environ", {"GH_TOKEN": "first-test-value", "GITHUB_TOKEN": "second-test-value"}), \
-             patch("scripts.update_stars.fetch_repository", return_value=7) as fetcher, \
-             patch("scripts.update_stars.render_all", return_value={}), \
-             patch("sys.stdout", new_callable=io.StringIO):
-            self.assertEqual(update_main(["--dry-run"]), 0)
-            self.assertTrue(all(c.args[1] == "first-test-value" for c in fetcher.call_args_list))
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "catalog/skills.yaml"
+            save_catalog(self.data, path)
+            with patch.dict("os.environ", {"GH_TOKEN": "first-test-value", "GITHUB_TOKEN": "second-test-value"}), \
+                 patch("scripts.update_stars.fetch_repository", return_value=7) as fetcher, \
+                 patch("scripts.update_stars.render_all", return_value={}), \
+                 patch("sys.stdout", new_callable=io.StringIO):
+                self.assertEqual(update_main(["--catalog", str(path), "--dry-run"]), 0)
+                self.assertTrue(all(c.args[1] == "first-test-value" for c in fetcher.call_args_list))
 
 
 class DocumentationTests(unittest.TestCase):

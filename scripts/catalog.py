@@ -64,7 +64,11 @@ def atomic_write(path, text):
 
 
 def save_catalog(data, path=CATALOG_PATH):
-    atomic_write(path, yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=100))
+    atomic_write(path, dump_catalog(data))
+
+
+def dump_catalog(data):
+    return yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=100)
 
 
 def sort_key(skill, repositories):
@@ -126,7 +130,7 @@ def validate(data):
         if not isinstance(meta, dict):
             errors.append(f"{prefix}: must be a mapping")
             continue
-        missing = {"url", "default_branch", "stars", "stars_updated_at", "updated_at", "pushed_at", "license"} - meta.keys()
+        missing = {"url", "default_branch", "stars", "stars_updated_at", "updated_at", "pushed_at", "license", "monitoring"} - meta.keys()
         if missing:
             errors.append(f"{prefix}: missing fields: {', '.join(sorted(missing))}")
             continue
@@ -142,12 +146,24 @@ def validate(data):
                 errors.append(f"{prefix}: {field} must be an ISO timestamp with timezone or null")
         if not isinstance(meta.get("default_branch"), str) or not meta["default_branch"]:
             errors.append(f"{prefix}: default_branch is required")
+        monitoring = meta.get("monitoring")
+        if (not isinstance(monitoring, dict) or not valid_timestamp(monitoring.get("reviewed_at")) or
+                not isinstance(monitoring.get("files"), dict) or not monitoring["files"]):
+            errors.append(f"{prefix}: monitoring requires a review timestamp and path/hash baseline")
+        else:
+            for path, digest in monitoring["files"].items():
+                if (not isinstance(path, str) or PurePosixPath(path).is_absolute() or
+                        ".." in PurePosixPath(path).parts or "\\" in path or
+                        (digest is not None and (not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{40}", digest)))):
+                    errors.append(f"{prefix}: invalid monitored path or Git SHA")
         license_info = meta.get("license")
         if not isinstance(license_info, dict):
             errors.append(f"{prefix}: license must be a mapping")
         elif (not valid_url(license_info.get("url")) or
               any(not isinstance(license_info.get(k), str) or not license_info[k].strip() for k in ("spdx", "scope", "note"))):
             errors.append(f"{prefix}: license requires spdx, scope, note and evidence URL")
+        elif license_info.get("evidence_status") not in ("declaration-only", "license-file-reviewed"):
+            errors.append(f"{prefix}: license evidence_status must distinguish declarations from inspected license files")
     seen = set()
     used_repos = set()
     for index, skill in enumerate(skills):
@@ -198,7 +214,7 @@ def validate(data):
         if not isinstance(verification, dict) or not isinstance(install, dict):
             errors.append(f"{prefix}: verification and install must be mappings")
             continue
-        missing = {"metadata", "installation", "installation_tested", "effectiveness", "last_reviewed", "test_report_url"} - verification.keys()
+        missing = {"metadata", "installation", "installation_tested", "effectiveness", "last_reviewed", "test_report_url", "installation_test_report_url", "smoke_scope", "smoke_report_url"} - verification.keys()
         missing_install = {"command", "documentation_url", "notes", "notes_zh"} - install.keys()
         if missing or missing_install:
             errors.append(f"{prefix}: missing verification or install fields")
@@ -226,6 +242,10 @@ def validate(data):
             errors.append(f"{prefix}: installation test claim requires reviewed instructions and installation_test_report_url")
         if verification.get("effectiveness") and not valid_url(verification.get("test_report_url")):
             errors.append(f"{prefix}: effectiveness claim requires test report URL")
+        if verification.get("smoke_scope") not in ("not-tested", "tool-smoke", "manual-walkthrough"):
+            errors.append(f"{prefix}: invalid smoke_scope")
+        if verification.get("smoke_scope") != "not-tested" and not valid_url(verification.get("smoke_report_url")):
+            errors.append(f"{prefix}: smoke evidence requires smoke_report_url")
         for field in ("notes", "notes_zh"):
             if not isinstance(install.get(field), str):
                 errors.append(f"{prefix}: install.{field} must be text")

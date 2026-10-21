@@ -1,0 +1,416 @@
+{
+  "tools": {
+    "@anthropic-ai/claude-code": "2.1.306",
+    "skills": "1.7.4",
+    "ui-ux-pro-max-cli": "2.15.0",
+    "impeccable": "4.7.0"
+  },
+  "attempts": [
+    {
+      "plan": "anthropic",
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00"
+    },
+    {
+      "plan": "ui-pro-max",
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00"
+    },
+    {
+      "plan": "addy",
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00"
+    },
+    {
+      "plan": "impeccable",
+      "passed": false,
+      "observed_at": "2026-10-21T06:49:24+00:00"
+    },
+    {
+      "plan": "matt",
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00"
+    },
+    {
+      "plan": "alireza",
+      "passed": false,
+      "observed_at": "2026-10-21T06:49:24+00:00"
+    },
+    {
+      "plan": "google",
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00"
+    },
+    {
+      "plan": "karpathy",
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00"
+    },
+    {
+      "plan": "impeccable",
+      "passed": false,
+      "observed_at": "2026-10-21T06:56:50+00:00"
+    },
+    {
+      "plan": "alireza",
+      "passed": false,
+      "observed_at": "2026-10-21T06:56:50+00:00"
+    },
+    {
+      "plan": "impeccable",
+      "passed": true,
+      "observed_at": "2026-10-21T06:57:46+00:00"
+    },
+    {
+      "plan": "alireza",
+      "passed": true,
+      "observed_at": "2026-10-21T06:57:46+00:00"
+    }
+  ],
+  "skills": {
+    "frontend-design": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "b8009ae690dfa69edc7f08bb8715f32db8817112cfa4388741dbaf876c237df8",
+      "installed_path": "claude-config/plugins/cache/anthropic-agent-skills/example-skills/dbd4588f9e10/skills/frontend-design/SKILL.md",
+      "supporting_resources": {
+        "LICENSE.txt": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "plugin",
+            "marketplace",
+            "add",
+            "anthropics/skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "arguments": [
+            "plugin",
+            "install",
+            "example-skills@anthropic-agent-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "ui-ux-pro-max": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "e5baf9400d4347e5ed3eb1f6b99cd0b9ba545b8b0e507aabb2b87397bbf73ea1",
+      "installed_path": ".agents/skills/ui-ux-pro-max/SKILL.md",
+      "supporting_resources": {
+        "scripts/search.py": true,
+        "data": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "init",
+            "--ai",
+            "codex"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "frontend-ui-engineering": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "29a3e53d57c0a128831a20730ae874a8c4fda40c001fcdc15f8e9ad4b5f72f1b",
+      "installed_path": "claude-config/plugins/cache/addy-agent-skills/agent-skills/0.6.13/skills/frontend-ui-engineering/SKILL.md",
+      "supporting_resources": {
+        "../../references/accessibility-checklist.md": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "plugin",
+            "marketplace",
+            "add",
+            "addyosmani/agent-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "arguments": [
+            "plugin",
+            "install",
+            "agent-skills@addy-agent-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "api-and-interface-design": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192",
+      "installed_path": "claude-config/plugins/cache/addy-agent-skills/agent-skills/0.6.13/skills/api-and-interface-design/SKILL.md",
+      "supporting_resources": {
+        "../../references": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "plugin",
+            "marketplace",
+            "add",
+            "addyosmani/agent-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "arguments": [
+            "plugin",
+            "install",
+            "agent-skills@addy-agent-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "domain-modeling": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "b62d997256cc073e123d4303da8e9db00db0e28de9739660ca3e55ab76e09cdb",
+      "installed_path": ".agents/skills/domain-modeling/SKILL.md",
+      "supporting_resources": {
+        "GLOSSARY-FORMAT.md": true,
+        "ADR-FORMAT.md": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "add",
+            "mattpocock/skills",
+            "--skill",
+            "domain-modeling",
+            "setup-matt-pocock-skills",
+            "--agent",
+            "codex",
+            "--copy",
+            "--yes",
+            "--full-depth",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "cloud-sql-basics": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "23ab14d93627070b659ed25b297c8530789706cda698d0ed6e4c900ac1427ccd",
+      "installed_path": ".agents/skills/cloud-sql-basics/SKILL.md",
+      "supporting_resources": {
+        "references/iac-usage.md": true,
+        "references/iam-security.md": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "add",
+            "google/skills",
+            "--skill",
+            "cloud-sql-basics",
+            "--agent",
+            "codex",
+            "--copy",
+            "--yes",
+            "--full-depth",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "karpathy-guidelines": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:49:24+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "e2553e9b66299fbca399804d6c44dfa44b2384b979ca5bf8b933b4916bb3141b",
+      "installed_path": "claude-config/plugins/cache/karpathy-skills/andrej-karpathy-skills/1.0.0/skills/karpathy-guidelines/SKILL.md",
+      "supporting_resources": {},
+      "commands": [
+        {
+          "arguments": [
+            "plugin",
+            "marketplace",
+            "add",
+            "multica-ai/andrej-karpathy-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "arguments": [
+            "plugin",
+            "install",
+            "andrej-karpathy-skills@karpathy-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "impeccable": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:57:46+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "033806203a5e05efe3b67c9d72fa597c40263d6ac95959701336d593b1069ce1",
+      "installed_path": "claude-config/plugins/cache/impeccable/impeccable/4.7.0/skills/impeccable/SKILL.md",
+      "supporting_resources": {
+        "scripts/impeccable.cmd": true,
+        "reference": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "plugin",
+            "marketplace",
+            "add",
+            "pbakaus/impeccable",
+            "--scope",
+            "project",
+            "--json",
+            "--sparse",
+            ".claude-plugin",
+            "plugin"
+          ],
+          "exit_code": 0
+        },
+        {
+          "arguments": [
+            "plugin",
+            "install",
+            "impeccable@impeccable",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "api-design-reviewer": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:57:46+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "984d644fd5d0ef8fcdb22673491f6097f389cba344665d15595c6420e977f66f",
+      "installed_path": "claude-config/plugins/cache/claude-code-skills/engineering-advanced-skills/2.9.0/skills/api-design-reviewer/SKILL.md",
+      "supporting_resources": {
+        "scripts/api_linter.py": true,
+        "scripts/breaking_change_detector.py": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "plugin",
+            "marketplace",
+            "add",
+            "alirezarezvani/claude-skills",
+            "--scope",
+            "project",
+            "--json",
+            "--sparse",
+            ".claude-plugin",
+            "engineering"
+          ],
+          "exit_code": 0
+        },
+        {
+          "arguments": [
+            "plugin",
+            "install",
+            "engineering-advanced-skills@claude-code-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "database-designer": {
+      "passed": true,
+      "observed_at": "2026-10-21T06:57:46+00:00",
+      "platform": "Windows",
+      "scope": "isolated project",
+      "skill_sha256": "2631b1cc6f005e5bc450227c3f91e77e3469bc55d9eaaec04c5fc85924127bd3",
+      "installed_path": "claude-config/plugins/cache/claude-code-skills/engineering-advanced-skills/2.9.0/skills/database-designer/SKILL.md",
+      "supporting_resources": {
+        "schema_analyzer.py": true,
+        "index_optimizer.py": true
+      },
+      "commands": [
+        {
+          "arguments": [
+            "plugin",
+            "marketplace",
+            "add",
+            "alirezarezvani/claude-skills",
+            "--scope",
+            "project",
+            "--json",
+            "--sparse",
+            ".claude-plugin",
+            "engineering"
+          ],
+          "exit_code": 0
+        },
+        {
+          "arguments": [
+            "plugin",
+            "install",
+            "engineering-advanced-skills@claude-code-skills",
+            "--scope",
+            "project",
+            "--json"
+          ],
+          "exit_code": 0
+        }
+      ]
+    }
+  },
+  "scope": "Installer execution, installed SKILL.md identity, and supporting-file presence only; no model activation or comparative quality claim."
+}

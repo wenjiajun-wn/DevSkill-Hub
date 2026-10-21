@@ -22,11 +22,11 @@ Reduce coding mistakes with explicit assumptions, simplicity, focused edits, and
 
 **Source / 来源:** [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) · [SKILL.md](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) · [reviewed revision](https://github.com/multica-ai/andrej-karpathy-skills/blob/64723a49ea6117894304eb491f0d32a60570bf45/skills/karpathy-guidelines/SKILL.md)
 
-**Stars:** 221594 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 221619 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
-**License:** [MIT](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) (upstream declaration; incomplete license evidence). SKILL.md frontmatter and the README declare MIT. No root LICENSE file was found and the API license field is null. Confirm complete terms with upstream before redistribution.
+**License:** [MIT (declaration only)](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) (upstream declaration; incomplete license evidence). SKILL.md frontmatter and the README declare MIT. No root LICENSE file was found and the API license field is null. Confirm complete terms with upstream before redistribution.
 
-**Skill last modified (UTC):** 2026-01-28T00:40:04Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-01-28T00:40:04Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -39,18 +39,20 @@ Reduce coding mistakes with explicit assumptions, simplicity, focused edits, and
 **Install / 安装**
 
 ```text
-/plugin marketplace add forrestchang/andrej-karpathy-skills
+/plugin marketplace add multica-ai/andrej-karpathy-skills
 /plugin install andrej-karpathy-skills@karpathy-skills
 ```
 
 [Upstream instructions / 上游安装说明](https://github.com/multica-ai/andrej-karpathy-skills#install)
 
-Enter in Claude Code. These are the exact upstream README commands, which still use the legacy forrestchang owner. The legacy address redirects to multica-ai on GitHub; plugin installation itself has not been executed. Confirm current upstream instructions before use.
+Enter in Claude Code. The canonical multica-ai repository successfully installed the plugin in an isolated project. This tested address replaces the legacy owner still shown in the upstream README. Complete root license terms remain unavailable.
 
-在 Claude Code 中输入。这是上游 README 原有命令，仍使用旧 forrestchang 所有者名称；GitHub 旧地址重定向到 multica-ai，但未执行插件安装。使用前请确认上游当前说明。
+在 Claude Code 内输入。已在隔离项目中通过 multica-ai 当前地址安装插件，以此替换上游 README 中的旧所有者名称。根目录完整许可证文本仍缺失。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Added as the tenth entry at the user's request under Engineering Practices, preserving the original 4/3/2 scope. Verified skills/karpathy-guidelines/SKILL.md. This is a community interpretation of Karpathy's observations, not an official Karpathy-authored skill. MIT is declared in frontmatter and README, but no root LICENSE file was found. Legacy install-owner naming is retained with a caveat.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#karpathy-guidelines) · [Scoped manual-walkthrough evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#karpathy-guidelines)
 
-按用户追加要求作为第十个条目加入工程实践分类，保留原定 4/3/2 范围。核实 skills/karpathy-guidelines/SKILL.md。它是社区对 Karpathy 观点的整理，并非 Karpathy 本人发布的官方 Skill。frontmatter 和 README 声明 MIT，但未找到根目录 LICENSE；安装命令保留上游旧所有者名称并注明限制。
+Added as the tenth entry at the user's request under Engineering Practices, preserving the original 4/3/2 scope. Verified skills/karpathy-guidelines/SKILL.md. This is a community interpretation of Karpathy's observations, not an official Karpathy-authored skill. MIT is declared in frontmatter and README, but no root LICENSE file was found. Canonical install-owner naming was verified by actual plugin installation. Follow-up: installation executed in an isolated project; bounded manual-walkthrough evidence is linked separately. Comparative effectiveness is not certified.
+
+按用户追加要求作为第十个条目加入工程实践分类，保留原定 4/3/2 范围。核实 skills/karpathy-guidelines/SKILL.md。它是社区对 Karpathy 观点的整理，并非 Karpathy 本人发布的官方 Skill。frontmatter 和 README 声明 MIT，但未找到根目录 LICENSE；安装命令已改为实际安装通过的当前仓库地址。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。

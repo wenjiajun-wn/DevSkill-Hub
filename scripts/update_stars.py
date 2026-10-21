@@ -13,11 +13,13 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 try:
-    from .catalog import CATALOG_PATH, CatalogError, load_catalog, save_catalog, sort_skills, validate
+    from .catalog import CATALOG_PATH, CatalogError, dump_catalog, load_catalog, sort_skills, validate
     from .render_catalog import render_all
+    from .transaction import commit_files, write_lock
 except ImportError:
-    from catalog import CATALOG_PATH, CatalogError, load_catalog, save_catalog, sort_skills, validate
+    from catalog import CATALOG_PATH, CatalogError, dump_catalog, load_catalog, sort_skills, validate
     from render_catalog import render_all
+    from transaction import commit_files, write_lock
 
 
 class GitHubError(RuntimeError):
@@ -72,39 +74,38 @@ def refresh(data, fetcher, timestamp):
     return updated
 
 
+def run(args):
+    data = load_catalog(args.catalog)
+    errors = validate(data)
+    if errors:
+        raise CatalogError("; ".join(errors))
+    token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    updated = refresh(data, lambda repo: fetch_repository(repo, token),
+                      datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"))
+    completed_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    for repository in updated["repositories"].values():
+        repository["stars_updated_at"] = completed_at
+    for repo, meta in updated["repositories"].items():
+        print(f"{repo}: {meta['stars']:,}")
+    root = Path(args.catalog).resolve().parent.parent
+    outputs = render_all(updated, root=root)
+    if args.dry_run:
+        print("Dry run: no project files changed.")
+        return 0
+    outputs[Path(args.catalog).resolve()] = dump_catalog(updated)
+    commit_files(outputs, root)
+    print("Stars, sorting, and generated documentation updated.")
+    return 0
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--catalog", default=CATALOG_PATH)
     parser.add_argument("--dry-run", action="store_true", help="Fetch and report without changing files")
     args = parser.parse_args(argv)
     try:
-        data = load_catalog(args.catalog)
-        errors = validate(data)
-        if errors:
-            raise CatalogError("; ".join(errors))
-        token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
-        # Record completion time after the last successful API response.
-        updated = refresh(data, lambda repo: fetch_repository(repo, token),
-                          datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"))
-        completed_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
-        for repository in updated["repositories"].values():
-            repository["stars_updated_at"] = completed_at
-        for repo, meta in updated["repositories"].items():
-            print(f"{repo}: {meta['stars']:,}")
-        # Prepare rendering before writing the YAML so malformed documents fail early.
-        outputs = render_all(updated, root=Path(args.catalog).resolve().parent.parent)
-        if args.dry_run:
-            print("Dry run: no files changed.")
-            return 0
-        save_catalog(updated, args.catalog)
-        try:
-            from .catalog import atomic_write
-        except ImportError:
-            from catalog import atomic_write
-        for path, text in outputs.items():
-            atomic_write(path, text)
-        print("Stars, sorting, and generated documentation updated.")
-        return 0
+        with write_lock(Path(args.catalog).resolve().parent.parent):
+            return run(args)
     except (CatalogError, GitHubError, OSError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1

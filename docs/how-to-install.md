@@ -31,6 +31,6 @@ Addy Osmani 的单 Skill 安装可能缺少共享 references。UI/UX Pro Max 的
 
 ## Verification boundary
 
-This release reviewed the published installation instructions and inspected actual skill files. It did not run third-party installers, provision cloud resources, or test all supported agents. Compatibility claims originate upstream unless a reproducible test report is linked. If an installation breaks, report the agent/version, operating system, command, error, and upstream revision without credentials.
+This release includes actual [isolated installation smoke tests](evaluations/installation-smoke.md) for all listed skills, with tool versions and supporting-file checks. The tested environment is Windows with project-scoped Claude Code plugins or Codex-compatible skill directories. It does not cover all agents, model auto-activation, cloud provisioning, or comparative effectiveness. If an installation breaks, report the agent/version, operating system, command, error, and upstream revision without credentials.
 
-本版本没有执行第三方安装器、创建云资源或测试所有 Agent。安装失败时，请提供工具版本、系统、命令、错误和上游版本，删除日志中的凭据。
+本版本已实际执行隔离安装，并检查配套文件；范围限于报告中的 Windows 项目级安装，没有测试所有 Agent、模型自动激活、云资源或对照效果。安装失败时，请提供工具版本、系统、命令、错误和上游版本，删除日志中的凭据。

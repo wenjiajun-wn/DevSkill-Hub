@@ -6,7 +6,7 @@
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs. | [298.9k](https://github.com/mattpocock/skills) | [Install](backend.md#domain-modeling) |
+| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs. | [299.0k](https://github.com/mattpocock/skills) | [Install](backend.md#domain-modeling) |
 | 2 | [API and Interface Design](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) | Contract-first interfaces, compatibility, boundary validation, and error semantics. | [109.1k](https://github.com/addyosmani/agent-skills) | [Install](backend.md#api-and-interface-design) |
 | 3 | [API Design Reviewer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) | Review REST conventions and OpenAPI contracts with linting and breaking-change checks. | [28.5k](https://github.com/alirezarezvani/claude-skills) | [Install](backend.md#api-design-reviewer) |
 
@@ -24,11 +24,11 @@ Clarify domain terminology, challenge edge cases, and maintain glossaries and AD
 
 **Source / 来源:** [mattpocock/skills](https://github.com/mattpocock/skills) · [SKILL.md](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) · [reviewed revision](https://github.com/mattpocock/skills/blob/d80fa0f4ebe0c5714af0adf8670336065233ecc6/skills/engineering/domain-modeling/SKILL.md)
 
-**Stars:** 298921 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 298999 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [MIT](https://github.com/mattpocock/skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
-**Skill last modified (UTC):** 2026-09-17T08:29:58Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-09-17T08:29:58Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -50,11 +50,13 @@ Upstream documents omitting -a to choose the agent interactively. Select domain-
 
 上游说明可省略 -a 交互选择 Agent。选择 domain-modeling，并按上游要求加入 setup-matt-pocock-skills，随后完成一次性设置。每个 Agent 只选一种安装方式以免重复。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Resolved the candidate to skills/engineering/domain-modeling/SKILL.md. Its actual focus is evolving domain language, GLOSSARY.md and ADRs, not generating a complete backend architecture. Backend is an editorial classification; the practices apply more broadly.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#domain-modeling) · [Scoped manual-walkthrough evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#domain-modeling)
 
-核实路径为 skills/engineering/domain-modeling/SKILL.md。实际重点是领域语言、GLOSSARY.md 与 ADR，不应描述为自动生成完整后端架构。后端是本目录的编辑分类，其方法也适用于其他场景。
+Resolved the candidate to skills/engineering/domain-modeling/SKILL.md. Its actual focus is evolving domain language, GLOSSARY.md and ADRs, not generating a complete backend architecture. Backend is an editorial classification; the practices apply more broadly. Follow-up: installation executed in an isolated project; bounded manual-walkthrough evidence is linked separately. Comparative effectiveness is not certified.
+
+核实路径为 skills/engineering/domain-modeling/SKILL.md。实际重点是领域语言、GLOSSARY.md 与 ADR，不应描述为自动生成完整后端架构。后端是本目录的编辑分类，其方法也适用于其他场景。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。
 
 <a id="api-and-interface-design"></a>
 
@@ -66,11 +68,11 @@ Contract-first interfaces, compatibility, boundary validation, and error semanti
 
 **Source / 来源:** [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) · [SKILL.md](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) · [reviewed revision](https://github.com/addyosmani/agent-skills/blob/5f7865623e92bba6462e2ee5c3c629998d4e0ddf/skills/api-and-interface-design/SKILL.md)
 
-**Stars:** 109059 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 109081 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [MIT](https://github.com/addyosmani/agent-skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
-**Skill last modified (UTC):** 2026-10-02T11:31:25Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-10-02T11:31:25Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -83,20 +85,23 @@ Contract-first interfaces, compatibility, boundary validation, and error semanti
 **Install / 安装**
 
 ```text
-npx skills add addyosmani/agent-skills
+/plugin marketplace add addyosmani/agent-skills
+/plugin install agent-skills@addy-agent-skills
 ```
 
 [Upstream instructions / 上游安装说明](https://github.com/addyosmani/agent-skills#quick-start)
 
-Upstream repository-level installation includes the collection. Individual --skill installs may omit the repository-level shared references directory; prefer the documented full-repository/native plugin integration when those checklists matter.
+Enter in Claude Code. The full plugin was installed in a disposable project with Claude Code 2.1.306 and repository-level references were confirmed present. Individual-skill copies can omit those references; see the installation report for exact tested scope.
 
-上游仓库级安装会包含整个集合。单独使用 --skill 安装可能缺少仓库级共享 references 目录，需要完整检查清单时请采用上游仓库或原生插件整合方式。
+在 Claude Code 内输入。已用 Claude Code 2.1.306 在临时项目安装完整插件，并确认仓库级参考资料存在。单 Skill 复制可能缺少这些资料；实测范围见安装报告。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Confirmed skills/api-and-interface-design/SKILL.md. Upstream documents repository-level npx installation and warns that individual-skill installs omit shared repository references. No installation or effectiveness test was performed.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#api-and-interface-design) · [Scoped manual-walkthrough evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#api-and-interface-design)
 
-核实路径 skills/api-and-interface-design/SKILL.md。上游明确记录仓库级 npx 安装，同时提醒单 Skill 安装可能缺少共享参考资料。未执行安装或效果测试。
+Confirmed skills/api-and-interface-design/SKILL.md. Upstream documents repository-level npx installation and warns that individual-skill installs omit shared repository references. Initial content review preceded installation testing. Follow-up: installation executed in an isolated project; bounded manual-walkthrough evidence is linked separately. Comparative effectiveness is not certified.
+
+核实路径 skills/api-and-interface-design/SKILL.md。上游明确记录仓库级 npx 安装，同时提醒单 Skill 安装可能缺少共享参考资料。初次内容审查早于安装实测。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。
 
 <a id="api-design-reviewer"></a>
 
@@ -108,11 +113,11 @@ Review REST conventions and OpenAPI contracts with linting and breaking-change c
 
 **Source / 来源:** [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) · [SKILL.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) · [reviewed revision](https://github.com/alirezarezvani/claude-skills/blob/aecfb8e0bb71dbf1413082f86b33a5c4c9b8f416/engineering/skills/api-design-reviewer/SKILL.md)
 
-**Stars:** 28459 · **Observed (UTC):** 2026-10-21T05:55:49Z
+**Stars:** 28463 · **Observed (UTC):** 2026-10-21T07:14:28Z
 
 **License:** [MIT](https://github.com/alirezarezvani/claude-skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
-**Skill last modified (UTC):** 2026-06-11T03:58:41Z · **Reviewed (UTC):** 2026-10-21T05:50:39Z
+**Skill last modified (UTC):** 2026-06-11T03:58:41Z · **Reviewed (UTC):** 2026-10-21T07:07:38Z
 
 **Use when / 适用场景**
 
@@ -131,12 +136,14 @@ Review REST conventions and OpenAPI contracts with linting and breaking-change c
 
 [Upstream instructions / 上游安装说明](https://github.com/alirezarezvani/claude-skills#quick-install)
 
-Enter in Claude Code; this installs the advanced engineering bundle. Upstream also documents cloning and copying the complete skill folder, including scripts and references, for manual installation.
+Enter in Claude Code. The advanced engineering bundle was actually installed, including its tools. A full clone timed out; the official CLI sparse option for .claude-plugin and engineering directories succeeded. See the report for version and scope.
 
-在 Claude Code 内输入，安装的是高级工程插件包。上游也说明可克隆后手动复制完整 Skill 目录，包括脚本与参考文件。
+在 Claude Code 内输入。高级工程插件包及工具已实际安装。全仓库克隆超时后，使用官方 CLI 对 .claude-plugin 和 engineering 目录稀疏检出成功；版本和范围见报告。
 
-**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: no; effectiveness tested: no.
+**Verification:** metadata reviewed: yes; install instructions reviewed: yes; installation executed: yes; effectiveness tested: no.
 
-Actual current path is engineering/skills/api-design-reviewer/SKILL.md, including the nested skills directory. The README documents the advanced engineering plugin bundle. Bundled tool claims were inspected but not benchmarked or executed.
+[Installation evidence / 安装实测](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/installation-smoke.md#api-design-reviewer) · [Scoped tool-smoke evidence / 限定范围评估](https://github.com/wenjiajun-wn/DevSkill-Hub/blob/main/docs/evaluations/functional-smoke.md#api-design-reviewer)
 
-当前实际路径是 engineering/skills/api-design-reviewer/SKILL.md，包含中间 skills 目录。README 提供高级工程插件包安装说明。已阅读配套工具的功能说明，但未执行或评测。
+Actual current path is engineering/skills/api-design-reviewer/SKILL.md, including the nested skills directory. The README documents the advanced engineering plugin bundle. Initial review covered bundled tool descriptions; subsequent executable smoke observations and limitations are in the linked functional report. Follow-up: installation executed in an isolated project; bounded tool-smoke evidence is linked separately. Comparative effectiveness is not certified.
+
+当前实际路径是 engineering/skills/api-design-reviewer/SKILL.md，包含中间 skills 目录。README 提供高级工程插件包安装说明。已阅读配套工具的功能说明，但当时未执行；后续冒烟结果另附。 后续复查：已在隔离项目执行安装，限定范围的冒烟/人工演练证据另附链接，未认证对照实验中的效果提升。

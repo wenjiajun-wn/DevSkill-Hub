@@ -6,9 +6,9 @@
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs. | [299.0k](https://github.com/mattpocock/skills) | [Install](backend.md#domain-modeling) |
-| 2 | [API and Interface Design](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) | Contract-first interfaces, compatibility, boundary validation, and error semantics. | [109.1k](https://github.com/addyosmani/agent-skills) | [Install](backend.md#api-and-interface-design) |
-| 3 | [API Design Reviewer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) | Review REST conventions and OpenAPI contracts with linting and breaking-change checks. | [28.5k](https://github.com/alirezarezvani/claude-skills) | [Install](backend.md#api-design-reviewer) |
+| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs. | [302.0k](https://github.com/mattpocock/skills) | [Install](backend.md#domain-modeling) |
+| 2 | [API and Interface Design](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) | Contract-first interfaces, compatibility, boundary validation, and error semantics. | [110.0k](https://github.com/addyosmani/agent-skills) | [Install](backend.md#api-and-interface-design) |
+| 3 | [API Design Reviewer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) | Review REST conventions and OpenAPI contracts with linting and breaking-change checks. | [28.6k](https://github.com/alirezarezvani/claude-skills) | [Install](backend.md#api-design-reviewer) |
 
 Repository stars are snapshots. Each entry records its own observation and review dates.
 
@@ -24,7 +24,7 @@ Clarify domain terminology, challenge edge cases, and maintain glossaries and AD
 
 **Source / 来源:** [mattpocock/skills](https://github.com/mattpocock/skills) · [SKILL.md](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) · [reviewed revision](https://github.com/mattpocock/skills/blob/d80fa0f4ebe0c5714af0adf8670336065233ecc6/skills/engineering/domain-modeling/SKILL.md)
 
-**Stars:** 298999 · **Observed (UTC):** 2026-10-21T07:14:28Z
+**Stars:** 302013 · **Observed (UTC):** 2026-10-24T08:07:52Z
 
 **License:** [MIT](https://github.com/mattpocock/skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
@@ -68,7 +68,7 @@ Contract-first interfaces, compatibility, boundary validation, and error semanti
 
 **Source / 来源:** [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) · [SKILL.md](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) · [reviewed revision](https://github.com/addyosmani/agent-skills/blob/5f7865623e92bba6462e2ee5c3c629998d4e0ddf/skills/api-and-interface-design/SKILL.md)
 
-**Stars:** 109081 · **Observed (UTC):** 2026-10-21T07:14:28Z
+**Stars:** 110044 · **Observed (UTC):** 2026-10-24T08:07:52Z
 
 **License:** [MIT](https://github.com/addyosmani/agent-skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
@@ -113,7 +113,7 @@ Review REST conventions and OpenAPI contracts with linting and breaking-change c
 
 **Source / 来源:** [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) · [SKILL.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) · [reviewed revision](https://github.com/alirezarezvani/claude-skills/blob/aecfb8e0bb71dbf1413082f86b33a5c4c9b8f416/engineering/skills/api-design-reviewer/SKILL.md)
 
-**Stars:** 28463 · **Observed (UTC):** 2026-10-21T07:14:28Z
+**Stars:** 28616 · **Observed (UTC):** 2026-10-24T08:07:52Z
 
 **License:** [MIT](https://github.com/alirezarezvani/claude-skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 

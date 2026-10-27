@@ -50,7 +50,7 @@ This installs a plugin bundle containing multiple skills. Read the [installation
 See [evaluation criteria](docs/evaluation-criteria.md) and the [verification record](docs/verification.md). Popularity is one navigation aid, not a quality benchmark.
 
 <!-- BEGIN catalog -->
-Stars observed (UTC): **2026-10-21T07:14:28Z**.
+Stars observed (UTC): **2026-10-26T08:55:30Z**.
 
 Stars belong to the source repository, not the individual skill. They measure popularity, not effectiveness. N/A means no verified data.
 
@@ -60,10 +60,10 @@ Stars belong to the source repository, not the individual skill. They measure po
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | Distinctive visual direction, typography, and intentional interface design. | [182.6k](https://github.com/anthropics/skills) | [Install](catalog/frontend.md#frontend-design) |
-| 2 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) | Searchable design guidance for palettes, typography, accessibility, and frontend stacks. | [138.1k](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | [Install](catalog/frontend.md#ui-ux-pro-max) |
-| 3 | [Frontend UI Engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) | Component architecture, responsive layouts, state management, and accessible UI. | [109.1k](https://github.com/addyosmani/agent-skills) | [Install](catalog/frontend.md#frontend-ui-engineering) |
-| 4 | [Impeccable](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) | Audit, critique, polish, and animate interfaces with a focused design workflow. | [84.0k](https://github.com/pbakaus/impeccable) | [Install](catalog/frontend.md#impeccable) |
+| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | Distinctive visual direction, typography, and intentional interface design. | [183.8k](https://github.com/anthropics/skills) | [Install](catalog/frontend.md#frontend-design) |
+| 2 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) | Searchable design guidance for palettes, typography, accessibility, and frontend stacks. | [140.6k](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | [Install](catalog/frontend.md#ui-ux-pro-max) |
+| 3 | [Frontend UI Engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) | Component architecture, responsive layouts, state management, and accessible UI. | [110.6k](https://github.com/addyosmani/agent-skills) | [Install](catalog/frontend.md#frontend-ui-engineering) |
+| 4 | [Impeccable](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) | Audit, critique, polish, and animate interfaces with a focused design workflow. | [88.3k](https://github.com/pbakaus/impeccable) | [Install](catalog/frontend.md#impeccable) |
 
 <a id="backend"></a>
 
@@ -71,9 +71,9 @@ Stars belong to the source repository, not the individual skill. They measure po
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs. | [299.0k](https://github.com/mattpocock/skills) | [Install](catalog/backend.md#domain-modeling) |
-| 2 | [API and Interface Design](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) | Contract-first interfaces, compatibility, boundary validation, and error semantics. | [109.1k](https://github.com/addyosmani/agent-skills) | [Install](catalog/backend.md#api-and-interface-design) |
-| 3 | [API Design Reviewer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) | Review REST conventions and OpenAPI contracts with linting and breaking-change checks. | [28.5k](https://github.com/alirezarezvani/claude-skills) | [Install](catalog/backend.md#api-design-reviewer) |
+| 1 | [Domain Modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md) | Clarify domain terminology, challenge edge cases, and maintain glossaries and ADRs. | [303.5k](https://github.com/mattpocock/skills) | [Install](catalog/backend.md#domain-modeling) |
+| 2 | [API and Interface Design](https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md) | Contract-first interfaces, compatibility, boundary validation, and error semantics. | [110.6k](https://github.com/addyosmani/agent-skills) | [Install](catalog/backend.md#api-and-interface-design) |
+| 3 | [API Design Reviewer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/api-design-reviewer/SKILL.md) | Review REST conventions and OpenAPI contracts with linting and breaking-change checks. | [28.7k](https://github.com/alirezarezvani/claude-skills) | [Install](catalog/backend.md#api-design-reviewer) |
 
 <a id="database"></a>
 
@@ -81,8 +81,8 @@ Stars belong to the source repository, not the individual skill. They measure po
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Database Designer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/database-designer/SKILL.md) | Schema modeling, index analysis, relationships, and migration planning. | [28.5k](https://github.com/alirezarezvani/claude-skills) | [Install](catalog/database.md#database-designer) |
-| 2 | [Cloud SQL Basics](https://github.com/google/skills/blob/main/skills/cloud/cloud-sql-basics/SKILL.md) | Guide Cloud SQL instances, databases, backups, availability, and secure connectivity. | [21.5k](https://github.com/google/skills) | [Install](catalog/database.md#cloud-sql-basics) |
+| 1 | [Database Designer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/database-designer/SKILL.md) | Schema modeling, index analysis, relationships, and migration planning. | [28.7k](https://github.com/alirezarezvani/claude-skills) | [Install](catalog/database.md#database-designer) |
+| 2 | [Cloud SQL Basics](https://github.com/google/skills/blob/main/skills/cloud/cloud-sql-basics/SKILL.md) | Guide Cloud SQL instances, databases, backups, availability, and secure connectivity. | [21.6k](https://github.com/google/skills) | [Install](catalog/database.md#cloud-sql-basics) |
 
 <a id="engineering"></a>
 
@@ -90,7 +90,7 @@ Stars belong to the source repository, not the individual skill. They measure po
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Karpathy Guidelines](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) | Reduce coding mistakes with explicit assumptions, simplicity, focused edits, and verifiable goals. | [221.6k](https://github.com/multica-ai/andrej-karpathy-skills) | [Install](catalog/engineering.md#karpathy-guidelines) |
+| 1 | [Karpathy Guidelines](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) | Reduce coding mistakes with explicit assumptions, simplicity, focused edits, and verifiable goals. | [224.1k](https://github.com/multica-ai/andrej-karpathy-skills) | [Install](catalog/engineering.md#karpathy-guidelines) |
 <!-- END catalog -->
 
 ## Contribute

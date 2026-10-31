@@ -6,10 +6,10 @@
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | Distinctive visual direction, typography, and intentional interface design. | [183.8k](https://github.com/anthropics/skills) | [Install](frontend.md#frontend-design) |
-| 2 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) | Searchable design guidance for palettes, typography, accessibility, and frontend stacks. | [140.6k](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | [Install](frontend.md#ui-ux-pro-max) |
-| 3 | [Frontend UI Engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) | Component architecture, responsive layouts, state management, and accessible UI. | [110.6k](https://github.com/addyosmani/agent-skills) | [Install](frontend.md#frontend-ui-engineering) |
-| 4 | [Impeccable](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) | Audit, critique, polish, and animate interfaces with a focused design workflow. | [88.3k](https://github.com/pbakaus/impeccable) | [Install](frontend.md#impeccable) |
+| 1 | [Frontend Design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) | Distinctive visual direction, typography, and intentional interface design. | [185.6k](https://github.com/anthropics/skills) | [Install](frontend.md#frontend-design) |
+| 2 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) | Searchable design guidance for palettes, typography, accessibility, and frontend stacks. | [143.2k](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | [Install](frontend.md#ui-ux-pro-max) |
+| 3 | [Frontend UI Engineering](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) | Component architecture, responsive layouts, state management, and accessible UI. | [112.1k](https://github.com/addyosmani/agent-skills) | [Install](frontend.md#frontend-ui-engineering) |
+| 4 | [Impeccable](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) | Audit, critique, polish, and animate interfaces with a focused design workflow. | [97.5k](https://github.com/pbakaus/impeccable) | [Install](frontend.md#impeccable) |
 
 Repository stars are snapshots. Each entry records its own observation and review dates.
 
@@ -25,7 +25,7 @@ Distinctive visual direction, typography, and intentional interface design.
 
 **Source / 来源:** [anthropics/skills](https://github.com/anthropics/skills) · [SKILL.md](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) · [reviewed revision](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md)
 
-**Stars:** 183842 · **Observed (UTC):** 2026-10-26T08:55:30Z
+**Stars:** 185603 · **Observed (UTC):** 2026-10-31T09:39:34Z
 
 **License:** [Apache-2.0](https://github.com/anthropics/skills/blob/main/skills/frontend-design/LICENSE.txt) (indexed skill only). Frontend Design has a file-level Apache-2.0 license. The repository includes other skills with different terms; its API license field is null.
 
@@ -70,7 +70,7 @@ Searchable design guidance for palettes, typography, accessibility, and frontend
 
 **Source / 来源:** [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) · [SKILL.md](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md) · [reviewed revision](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/a38d04c3d5c298c851dbe5e6ee1965ee3de42cb5/.claude/skills/ui-ux-pro-max/SKILL.md)
 
-**Stars:** 140564 · **Observed (UTC):** 2026-10-26T08:55:30Z
+**Stars:** 143177 · **Observed (UTC):** 2026-10-31T09:39:34Z
 
 **License:** [MIT](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
@@ -115,7 +115,7 @@ Component architecture, responsive layouts, state management, and accessible UI.
 
 **Source / 来源:** [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) · [SKILL.md](https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md) · [reviewed revision](https://github.com/addyosmani/agent-skills/blob/3e1e0a2db595ab2abe89b1204f7eabb67a24eb90/skills/frontend-ui-engineering/SKILL.md)
 
-**Stars:** 110602 · **Observed (UTC):** 2026-10-26T08:55:30Z
+**Stars:** 112072 · **Observed (UTC):** 2026-10-31T09:39:34Z
 
 **License:** [MIT](https://github.com/addyosmani/agent-skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
@@ -160,7 +160,7 @@ Audit, critique, polish, and animate interfaces with a focused design workflow.
 
 **Source / 来源:** [pbakaus/impeccable](https://github.com/pbakaus/impeccable) · [SKILL.md](https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md) · [reviewed revision](https://github.com/pbakaus/impeccable/blob/aeeb3d8c30b5f95aeeb3e893b0f1a308af8fdb8f/.agents/skills/impeccable/SKILL.md)
 
-**Stars:** 88254 · **Observed (UTC):** 2026-10-26T08:55:30Z
+**Stars:** 97547 · **Observed (UTC):** 2026-10-31T09:39:34Z
 
 **License:** [Apache-2.0](https://github.com/pbakaus/impeccable/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 

@@ -6,8 +6,8 @@
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Database Designer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/database-designer/SKILL.md) | Schema modeling, index analysis, relationships, and migration planning. | [28.7k](https://github.com/alirezarezvani/claude-skills) | [Install](database.md#database-designer) |
-| 2 | [Cloud SQL Basics](https://github.com/google/skills/blob/main/skills/cloud/cloud-sql-basics/SKILL.md) | Guide Cloud SQL instances, databases, backups, availability, and secure connectivity. | [21.6k](https://github.com/google/skills) | [Install](database.md#cloud-sql-basics) |
+| 1 | [Database Designer](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/database-designer/SKILL.md) | Schema modeling, index analysis, relationships, and migration planning. | [29.0k](https://github.com/alirezarezvani/claude-skills) | [Install](database.md#database-designer) |
+| 2 | [Cloud SQL Basics](https://github.com/google/skills/blob/main/skills/cloud/cloud-sql-basics/SKILL.md) | Guide Cloud SQL instances, databases, backups, availability, and secure connectivity. | [21.7k](https://github.com/google/skills) | [Install](database.md#cloud-sql-basics) |
 
 Repository stars are snapshots. Each entry records its own observation and review dates.
 
@@ -23,7 +23,7 @@ Schema modeling, index analysis, relationships, and migration planning.
 
 **Source / 来源:** [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) · [SKILL.md](https://github.com/alirezarezvani/claude-skills/blob/main/engineering/skills/database-designer/SKILL.md) · [reviewed revision](https://github.com/alirezarezvani/claude-skills/blob/aecfb8e0bb71dbf1413082f86b33a5c4c9b8f416/engineering/skills/database-designer/SKILL.md)
 
-**Stars:** 28735 · **Observed (UTC):** 2026-10-26T08:55:30Z
+**Stars:** 29044 · **Observed (UTC):** 2026-10-31T09:39:34Z
 
 **License:** [MIT](https://github.com/alirezarezvani/claude-skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 
@@ -68,7 +68,7 @@ Guide Cloud SQL instances, databases, backups, availability, and secure connecti
 
 **Source / 来源:** [google/skills](https://github.com/google/skills) · [SKILL.md](https://github.com/google/skills/blob/main/skills/cloud/cloud-sql-basics/SKILL.md) · [reviewed revision](https://github.com/google/skills/blob/dcedfd4d770b27e9586601e7ded26d58c4eb315b/skills/cloud/cloud-sql-basics/SKILL.md)
 
-**Stars:** 21580 · **Observed (UTC):** 2026-10-26T08:55:30Z
+**Stars:** 21711 · **Observed (UTC):** 2026-10-31T09:39:34Z
 
 **License:** [Apache-2.0](https://github.com/google/skills/blob/main/LICENSE) (repository default). Repository LICENSE inspected; check any file-level or bundled third-party notices before reuse.
 

@@ -6,7 +6,7 @@
 
 | Rank | Skill | Description | Repository Stars | Install |
 | ---: | --- | --- | ---: | --- |
-| 1 | [Karpathy Guidelines](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) | Reduce coding mistakes with explicit assumptions, simplicity, focused edits, and verifiable goals. | [224.1k](https://github.com/multica-ai/andrej-karpathy-skills) | [Install](engineering.md#karpathy-guidelines) |
+| 1 | [Karpathy Guidelines](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) | Reduce coding mistakes with explicit assumptions, simplicity, focused edits, and verifiable goals. | [227.1k](https://github.com/multica-ai/andrej-karpathy-skills) | [Install](engineering.md#karpathy-guidelines) |
 
 Repository stars are snapshots. Each entry records its own observation and review dates.
 
@@ -22,7 +22,7 @@ Reduce coding mistakes with explicit assumptions, simplicity, focused edits, and
 
 **Source / 来源:** [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) · [SKILL.md](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) · [reviewed revision](https://github.com/multica-ai/andrej-karpathy-skills/blob/64723a49ea6117894304eb491f0d32a60570bf45/skills/karpathy-guidelines/SKILL.md)
 
-**Stars:** 224055 · **Observed (UTC):** 2026-10-26T08:55:30Z
+**Stars:** 227089 · **Observed (UTC):** 2026-10-31T09:39:34Z
 
 **License:** [MIT (declaration only)](https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md) (upstream declaration; incomplete license evidence). SKILL.md frontmatter and the README declare MIT. No root LICENSE file was found and the API license field is null. Confirm complete terms with upstream before redistribution.
 

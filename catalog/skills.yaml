@@ -17,8 +17,8 @@ repositories:
   anthropics/skills:
     url: https://github.com/anthropics/skills
     default_branch: main
-    stars: 183842
-    stars_updated_at: '2026-10-26T08:55:30Z'
+    stars: 185603
+    stars_updated_at: '2026-10-31T09:39:34Z'
     updated_at: '2026-10-21T05:36:21Z'
     pushed_at: '2026-10-09T18:45:52Z'
     license:
@@ -39,8 +39,8 @@ repositories:
   nextlevelbuilder/ui-ux-pro-max-skill:
     url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
     default_branch: main
-    stars: 140564
-    stars_updated_at: '2026-10-26T08:55:30Z'
+    stars: 143177
+    stars_updated_at: '2026-10-31T09:39:34Z'
     updated_at: '2026-10-21T05:36:03Z'
     pushed_at: '2026-10-15T02:04:34Z'
     license:
@@ -59,8 +59,8 @@ repositories:
   addyosmani/agent-skills:
     url: https://github.com/addyosmani/agent-skills
     default_branch: main
-    stars: 110602
-    stars_updated_at: '2026-10-26T08:55:30Z'
+    stars: 112072
+    stars_updated_at: '2026-10-31T09:39:34Z'
     updated_at: '2026-10-21T05:38:33Z'
     pushed_at: '2026-10-13T20:24:07Z'
     license:
@@ -80,8 +80,8 @@ repositories:
   pbakaus/impeccable:
     url: https://github.com/pbakaus/impeccable
     default_branch: main
-    stars: 88254
-    stars_updated_at: '2026-10-26T08:55:30Z'
+    stars: 97547
+    stars_updated_at: '2026-10-31T09:39:34Z'
     updated_at: '2026-10-21T05:37:19Z'
     pushed_at: '2026-10-21T03:11:42Z'
     license:
@@ -100,8 +100,8 @@ repositories:
   mattpocock/skills:
     url: https://github.com/mattpocock/skills
     default_branch: main
-    stars: 303536
-    stars_updated_at: '2026-10-26T08:55:30Z'
+    stars: 307764
+    stars_updated_at: '2026-10-31T09:39:34Z'
     updated_at: '2026-10-21T05:37:29Z'
     pushed_at: '2026-10-19T15:52:15Z'
     license:
@@ -120,8 +120,8 @@ repositories:
   alirezarezvani/claude-skills:
     url: https://github.com/alirezarezvani/claude-skills
     default_branch: main
-    stars: 28735
-    stars_updated_at: '2026-10-26T08:55:30Z'
+    stars: 29044
+    stars_updated_at: '2026-10-31T09:39:34Z'
     updated_at: '2026-10-21T05:10:56Z'
     pushed_at: '2026-08-30T09:46:16Z'
     license:
@@ -141,8 +141,8 @@ repositories:
   google/skills:
     url: https://github.com/google/skills
     default_branch: main
-    stars: 21580
-    stars_updated_at: '2026-10-26T08:55:30Z'
+    stars: 21711
+    stars_updated_at: '2026-10-31T09:39:34Z'
     updated_at: '2026-10-21T04:35:44Z'
     pushed_at: '2026-10-20T21:04:39Z'
     license:
@@ -161,8 +161,8 @@ repositories:
   multica-ai/andrej-karpathy-skills:
     url: https://github.com/multica-ai/andrej-karpathy-skills
     default_branch: main
-    stars: 224055
-    stars_updated_at: '2026-10-26T08:55:30Z'
+    stars: 227089
+    stars_updated_at: '2026-10-31T09:39:34Z'
     updated_at: '2026-10-21T05:38:31Z'
     pushed_at: '2026-04-20T10:05:04Z'
     license:

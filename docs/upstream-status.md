@@ -6,9 +6,29 @@ This report compares Git blob/tree hashes against explicitly recorded review bas
 
 比较已记录基线与上游文件/目录哈希。检测 Skill 及配套资料、安装说明、插件元数据和许可证的新增、删除或修改。检测成功不会自动更新人工审查日期或测试结论。
 
-## Result / 结果
+## Changes requiring review / 需要复审
+| Repository | Path | Status |
+| --- | --- | --- |
+| [anthropics/skills](https://github.com/anthropics/skills) | `README.md` | changed |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `README.md` | changed |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `.claude-plugin` | changed |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `.claude/skills/ui-ux-pro-max` | changed |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | `.claude-plugin` | changed |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | `skills/frontend-ui-engineering` | changed |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | `skills/api-and-interface-design` | changed |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | `README.md` | changed |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | `.claude-plugin` | changed |
+| [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | `.agents/skills/impeccable` | changed |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | `.claude-plugin` | changed |
+| [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | `README.md` | changed |
+| [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | `.claude-plugin` | changed |
+| [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | `engineering/skills/api-design-reviewer` | changed |
+| [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | `engineering/skills/database-designer` | changed |
+| [google/skills](https://github.com/google/skills) | `README.md` | changed |
 
-No monitored changes relative to the recorded baselines. / 与记录的基线相比，未检测到所监测内容的变化。
+Reinspect the changed files, rerun relevant smoke tests, then update the baseline and review evidence in a human-reviewed PR. Do not reset hashes just to silence a warning.
+
+重新阅读变更内容并运行相关测试后，在人工审查的 PR 中更新基线，不要仅为清除警告而替换哈希。
 
 ## Reviewed baselines / 复审基线
 | Repository | Baseline recorded (UTC) | Monitored paths |
